@@ -3,6 +3,69 @@
 
 <div class="container">
 	<div class="row">
-		<p>Contact Form</p>
+
+		<h1 class="contact-title col-12">
+			Send us a message!
+		</h1>
+<hr>
+		<div class="col-12">
+			<div class="contact-info col-4 pull-right">
+				<strong>Address: </strong>
+					<p>2001 W Detroit</p>
+					<p>Broken Arrow, OK 74012</p>
+
+				<strong>Email: </strong><p>blake@primeperformancesc.com</p><br />
+				<strong><p>Look us up on social media!</p></strong>
+				<ul class="social-icons">
+					<li class="nav_item"><%= link_to fa_icon('instagram', class: 'fa-4x'), 'https://www.instagram.com/primeperformancesc/', title: 'Follow on Us Instagram', target: '_blank' %></li>
+					<li class="nav_item"><%= link_to fa_icon('facebook-square', class: 'fa-4x'), 'https://www.facebook.com/primeperformancesc/', title: 'Like on Us Facebook', target: '_blank' %></li>
+				</ul>
+			</div>
+
+
+		<form action="https://app.wodify.com/API/WebToLeadFormPostEntry_v1.aspx?" accept-charset="UTF-8" method="POST" id="wodifyLeadForm" class="col-8 pull left" name="wodifyLeadForm" onsubmit="return validateWodifyLeadForm();">
+
+		<div class="form-group">	
+			<label for="name">*Name</label>
+
+			<input type="text" class="form-control" name="name" maxlength="50" required data-required>
+			</input><span id="errorname" name="errorname" style="display: none; color: #cc2626;"> Required field!</span>
+		</div>
+		<div class="form-group">
+			<label for="email">
+				*Email
+			</label>
+			<input type="email" class="form-control" name="email" maxlength="250" required data-required>
+
+			</input><span id="erroremail" name="erroremail" style="display: none; color: #cc2626;"> Required field!</span>
+		</div>
+		<div class="form-group">
+			<label for="location">
+				*Location
+			</label>
+			<select name="location" class="form-control" required>
+				<option value="">-</option>
+				<option value="3338" selected="selected">CrossTowne LifeFit</option>
+			</select><span id="errorlocation" name="errorlocation" style="display: none; color: #cc2626;"> Required field!</span>
+		</div>
+		<div class="form-group">
+			<label for="dateofbirth">
+				Date Of Birth
+			</label>
+			<input type="date" class="form-control" name="dateofbirth">
+				
+			</input>
+		</div>
+		<div class="form-group">
+			<label for="comments">
+				Comments
+			</label>
+			<textarea name="comments" class="form-control" maxlength="2000" rows="4" cols="50"></textarea>
+				<input type="hidden" name="redirecturl" value="http://www.crosstownelifefit.com">
+		</div>
+				<input type="hidden" name="apikey" value="uahbal0k5c">
+			<br/><input type="submit" value="Submit" class="btn btn-primary">
+			</form>
+		</div>
 	</div>
 </div>
