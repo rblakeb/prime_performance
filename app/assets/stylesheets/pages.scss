@@ -64,6 +64,10 @@ div.home-section-2 {
 	z-index: 999999;
    position: relative;
 
+   h1 {
+   	margin: 5%;
+   }
+
    p.lead.mission-statement {
    	text-align: center;
    	font-size: 1.65rem;
@@ -80,6 +84,7 @@ div.home-section-3 {
 
    h1 {
    	color: #ffffff;
+   	margin: 5%;
    }
 
    div.card.col-3 {
@@ -92,6 +97,10 @@ div.home-section-4 {
 	min-width: 100vw;
 	z-index: 999999;
    position: relative;
+
+   h1 {
+   	margin: 5%;
+   }
 
    div.contact-section {
    	min-height: 100%;
@@ -110,6 +119,15 @@ h1.contact-title {
 	margin: 20px 0 0 10px;
 }
 
-/*#wodifyLeadForm {
-	margin: 0 auto;
-}*/
+div.card {
+	margin: 10px 0 0 10px;
+	display: inline-flex;
+
+	.card-link {
+		color: #1E90FF;
+
+		&:hover {
+			color: darken(#1E90FF, 10%);
+		}
+	}
+}

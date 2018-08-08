@@ -28,10 +28,10 @@
 		
 			<div class="home-section-3">
 				
-					<h1>The Team</h1>
-					<div class="container">
+			<h1>The Team</h1>
+				<div class="container">
 					<div class="row justify-content-center">
-						<div class="card col-3" style="width: 18rem;">
+						<div class="card col-md-3" style="width: 18rem;">
 						  <%= image_tag 'logo_black.png', class: 'card-img-top', alt: 'card' %>
 						  <div class="card-body">
 						    <h5 class="card-title">Blake Barnes</h5>
@@ -39,7 +39,7 @@
 						    <%= link_to 'Contact', contact_path, class: 'btn btn-primary' %>
 						  </div>
 						</div>
-						<div class="card col-3" style="width: 18rem;">
+						<div class="card col-md-3" style="width: 18rem;">
 						  <%= image_tag 'logo_black.png', class: 'card-img-top', alt: 'card' %>
 						  <div class="card-body">
 						    <h5 class="card-title">Alyssa Sulay</h5>
@@ -47,7 +47,7 @@
 						    <%= link_to 'Contact', contact_path, class: 'btn btn-primary' %>
 						  </div>
 						</div>
-						<div class="card col-3" style="width: 18rem;">
+						<div class="card col-md-3" style="width: 18rem;">
 						  <%= image_tag 'logo_black.png', class: 'card-img-top', alt: 'card' %>
 						  <div class="card-body">
 						    <h5 class="card-title">Britni Tallman</h5>
@@ -59,9 +59,58 @@
 				</div>
 			</div>
 		
-			<div class="home-section-4">
-				
-					<h1>Packages</h1>
-				
+			<div class="home-section-4">				
+				<h1>Packages</h1>
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="package-type col-md-10">
+								<div class="card" style="width: 18rem;">
+								  <div class="card-body">
+								    <h5 class="card-title">Basic Package - $99/month</h5>
+								    <!-- <p class="card-text">Our basic package allows unlimited access to classes along with access to open gym hours.</p> -->
+								  </div>
+								  <ul class="list-group list-group-flush">
+								    <li class="list-group-item">Unlimited access to classes</li>
+								    <li class="list-group-item">Access to open gym hours</li>
+								  </ul>
+								  <div class="card-body">
+								    <%= link_to 'I want this', contact_path, class: 'btn btn-primary' %>
+								  </div>
+								</div>
+							
+								<div class="card" style="width: 18rem;">
+								  <div class="card-body">
+								    <h5 class="card-title">"Train & Maintain" - $130/month</h5>
+								   <!--  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+								  </div>
+								  <ul class="list-group list-group-flush">
+								    <li class="list-group-item">Unlimited access to classes</li>
+								    <li class="list-group-item">Included <strong>2 free chiropractor visits</strong> per month at F5 Chiropractic</li>
+								    <li class="list-group-item">Access to open gym hours</li>
+								  </ul>
+								  <div class="card-body">
+								    <%= link_to 'I want this', contact_path, class: 'btn btn-primary' %>
+								    <%= link_to 'F5 Chiropractic', 'https://www.f5chiropractic.com/', class: 'card-link', target: '_blank' %>
+								  </div>
+								</div>
+
+								<div class="card" style="width: 18rem;">
+								  <div class="card-body">
+								    <h5 class="card-title">"Train & Gain" - $140/month</h5>
+								    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+								  </div>
+								  <ul class="list-group list-group-flush">
+								    <li class="list-group-item">Unlimited access to classes</li>
+								    <li class="list-group-item"><strong>Get a personal nutrition coach</strong></li>
+								    <li class="list-group-item">Access to open gym hours</li>
+								    <li class="list-group-item">Limited spots available!</li>
+								  </ul>
+								  <div class="card-body">
+								    <%= link_to 'I want this', contact_path, class: 'btn btn-primary' %>
+								  </div>
+								</div>
+							</div>
+						</div>
+					</div>
 			</div>
 		</div>

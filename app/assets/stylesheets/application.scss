@@ -28,3 +28,17 @@ hr {
 	background-color: #999999;
 	height: 1px;
 }
+
+.btn {
+	border-radius: 0.15rem;
+}
+
+.btn-primary {
+	background-color: #1E90FF;
+	border: none;
+
+	&:hover {
+		background-color: darken(#1E90FF, 10%);
+	}
+
+}
