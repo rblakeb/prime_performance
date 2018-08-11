@@ -1,0 +1,25 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<p id="notice"><%= notice %></p>
+
+			<h1><%= @nutrition_coach.name %></h1>
+<hr>
+			<p>
+			  <strong>Email:</strong>
+			  <%= @nutrition_coach.email %>
+			</p>
+
+			<p>
+			  <strong>Name:</strong>
+			  <%= @nutrition_coach.name %>
+			</p>
+
+			<%= link_to 'Edit', edit_nutrition_coach_path(@nutrition_coach) %> |
+			<%= link_to 'Back', nutrition_coaches_path %>
+		</div>
+		<div class="col-md-6">
+			
+		</div>
+	</div>
+</div>

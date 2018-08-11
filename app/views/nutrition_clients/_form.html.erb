@@ -1,0 +1,39 @@
+<div class="col-md-4">
+    <%= form_with(model: nutrition_client, local: true) do |f| %>
+    <% if nutrition_client.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(nutrition_client.errors.count, "error") %> prohibited this nutrition_client from being saved:</h2>
+
+        <ul>
+        <% nutrition_client.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :email %>
+      <%= f.email_field :email, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :nutrition_coach %>
+      <%= f.select :nutrition_coach_id, options_for_select(NutritionCoach.all.collect {|a| [a.name, a.id]}), class: 'form-control' %>
+    </div>
+
+      <div class="actions">
+        <%= f.submit "Let's do this!", class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+</div>

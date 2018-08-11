@@ -1,0 +1,34 @@
+<div class="col-md-4">
+  <%= form_with(model: nutrition_coach, local: true) do |f| %>
+    <% if nutrition_coach.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(nutrition_coach.errors.count, "error") %> prohibited this nutrition_coach from being saved:</h2>
+
+        <ul>
+        <% nutrition_coach.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.email_field :email, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :password %>
+        <%= f.password_field :password, class: 'form-control' %>
+      </div>
+
+    <div class="actions">
+      <%= f.submit class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+</div>

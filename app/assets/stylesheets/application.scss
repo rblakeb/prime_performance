@@ -36,9 +36,48 @@ hr {
 .btn-primary {
 	background-color: #1E90FF;
 	border: none;
+	color: white;
 
 	&:hover {
 		background-color: darken(#1E90FF, 10%);
 	}
+	:visited {
+		color: white;
+	}
+}
 
+.alert-notice, .alert-success {
+  padding: 15px;
+  margin-bottom: 0 auto;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  position: fixed;
+  z-index: 99999;
+  left: 50%;
+  top: 10%;
+  min-width: 180px;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  background-color: #2996cc;
+}
+
+.alert-danger {
+  padding: 15px;
+  border-radius: 3px;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 99999;
+  right: 20%;
+  left: 20%;
+  width: auto;
+  text-align: center;
+}
+
+a.btn.btn-primary {
+	color: white;
+
+	a:visited {
+		color: white;
+	}
 }
