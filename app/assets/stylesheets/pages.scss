@@ -123,11 +123,16 @@ div.card {
 	margin: 10px 0 0 10px;
 	display: inline-flex;
 
+	a.btn.btn-primary {
+		margin-right: 15px;
+	}
+
 	.card-link {
 		color: #1E90FF;
 
 		&:hover {
 			color: darken(#1E90FF, 10%);
+			background-color: transparent;
 		}
 	}
 }

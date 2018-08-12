@@ -31,7 +31,7 @@
 			<h1>The Team</h1>
 				<div class="container">
 					<div class="row justify-content-center">
-						<div class="card col-md-3" style="width: 18rem;">
+						<div class="card col-md-3">
 						  <%= image_tag 'logo_black.png', class: 'card-img-top', alt: 'card' %>
 						  <div class="card-body">
 						    <h5 class="card-title">Blake Barnes</h5>
@@ -39,7 +39,7 @@
 						    <%= link_to 'Contact', contact_path, class: 'btn btn-primary' %>
 						  </div>
 						</div>
-						<div class="card col-md-3" style="width: 18rem;">
+						<div class="card col-md-3">
 						  <%= image_tag 'logo_black.png', class: 'card-img-top', alt: 'card' %>
 						  <div class="card-body">
 						    <h5 class="card-title">Alyssa Sulay</h5>
@@ -47,7 +47,7 @@
 						    <%= link_to 'Contact', contact_path, class: 'btn btn-primary' %>
 						  </div>
 						</div>
-						<div class="card col-md-3" style="width: 18rem;">
+						<div class="card col-md-3">
 						  <%= image_tag 'logo_black.png', class: 'card-img-top', alt: 'card' %>
 						  <div class="card-body">
 						    <h5 class="card-title">Britni Tallman</h5>
@@ -63,11 +63,9 @@
 				<h1>Packages</h1>
 					<div class="container">
 						<div class="row justify-content-center">
-							<div class="package-type col-md-10">
-								<div class="card" style="width: 18rem;">
+								<div class="card col-md-3">
 								  <div class="card-body">
 								    <h4 class="card-title"><strong>Basic Package</strong> - $99/month</h4>
-								    <!-- <p class="card-text">Our basic package allows unlimited access to classes along with access to open gym hours.</p> -->
 								  </div>
 								  <ul class="list-group list-group-flush">
 								    <li class="list-group-item"><p>Unlimited access to classes</p></li>
@@ -78,26 +76,23 @@
 								  </div>
 								</div>
 							
-								<div class="card" style="width: 18rem;">
+								<div class="card col-md-3">
 								  <div class="card-body">
 								    <h4 class="card-title"><strong>"Train & Maintain"</strong> - $149/month</h4>
-								   <!--  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
 								  </div>
 								  <ul class="list-group list-group-flush">
 								    <li class="list-group-item"><p>Unlimited access to classes</p></li>
-								    <li class="list-group-item"><p>Includes <strong>2 free chiropractor visits</strong> per month at F5 Chiropractic</p></li>
+								    <li class="list-group-item"><p>Includes <strong>2 free chiropractor visits</strong> per month at <%= link_to 'F5 Chiropractic', 'https://www.f5chiropractic.com/', class: 'card-link', target: '_blank' %></p></li>
 								    <li class="list-group-item"><p>Access to open gym hours</p></li>
 								  </ul>
 								<div class="card-body">
 								   <%= link_to 'I want this', contact_path, class: 'btn btn-primary' %>
-								   <%= link_to 'F5 Chiropractic', 'https://www.f5chiropractic.com/', class: 'card-link', target: '_blank' %>
 								  </div>
 								</div>
 
-								<div class="card" style="width: 18rem;">
+								<div class="card col-md-3">
 								  <div class="card-body">
-								    <h4 class="card-title">"Train & Gain" - $149/month</h4>
-								    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+								    <h4 class="card-title"><strong>"Train & Gain"</strong> - $149/month</h4>
 								  </div>
 								  <ul class="list-group list-group-flush">
 								    <li class="list-group-item"><p>Unlimited access to classes</p></li>
@@ -109,8 +104,24 @@
 								    <%= link_to 'I want this', contact_path, class: 'btn btn-primary' %>
 								  </div>
 								</div>
+
+									<div class="card text-center col-md-10">
+									  <div class="card-header">
+									    <h3><srong>Prime Package</srong></h3>
+									  </div>
+									  <div class="card-body">
+									    <h5 class="card-title">$199/month</h5>
+									    <p class="card-text">Enjoy the benefits of getting the best chiropractic care in the area as well as your own nutrition coach to keep you accountable with what you're eating!</p>
+									  	<%= link_to 'I want this', contact_path, class: 'btn btn-primary' %>
+									  </div>
+									  <div class="card-footer text-muted">
+									    Only for people who are serious about their health
+									  </div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
+				</div>
 			</div>
 		</div>
