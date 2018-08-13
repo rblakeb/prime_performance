@@ -28,12 +28,17 @@
     </div>
 
     <div class="form-group">
-      <%= f.label :nutrition_coach %>
+      <%= f.label :nutrition_coach, 'Nutrition Coach' %>
       <%= f.select :nutrition_coach_id, options_for_select(NutritionCoach.all.collect {|a| [a.name, a.id]}), class: 'form-control' %>
     </div>
 
+    <div class="form-inline">
+      <%= f.label :active %>
+      <%= f.check_box :active, class: 'form-control' %>
+    </div>
+
       <div class="actions">
-        <%= f.submit "Let's do this!", class: 'btn btn-primary' %>
+        <%= f.submit class: 'btn btn-primary' %>
       </div>
     <% end %>
 </div>

@@ -1,38 +1,36 @@
-<div class="container">
-  <!-- <div class="row"> -->
+<div class="container">  
 
-    <p id="notice"><%= notice %></p>
+  <p id="notice"><%= notice %></p>
 
-    <h1>
-      Nutrition Coaches
-      <%= link_to 'New Nutrition Coach', new_nutrition_coach_path, class: 'btn btn-primary float-right' %>
-    </h1>
+  <h1>
+    Nutrition Coaches
+    <%= link_to 'New Nutrition Coach', new_nutrition_coach_path, class: 'btn btn-primary float-right' %>
+  </h1>
 
-    <table class="table">
-      <thead class="thead-dark">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Email</th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @nutrition_coaches.each.with_index do |nutrition_coach, index| %>
+      <% index += 1 %>
         <tr>
-          <th scope="col">#</th>
-          <th scope="col">Email</th>
-          <th scope="col">Name</th>
-          <th scope="col"></th>
-          <th scope="col"></th>
-          <th scope="col"></th>
+          <th scope="row" style="vertical-align: middle;"><%= index %></th>
+          <td><%= mail_to nutrition_coach.email, nutrition_coach.email, class: 'btn btn-link' %></td>
+          <td><%= link_to nutrition_coach.name, nutrition_coach_path(id: nutrition_coach.id), class: 'btn btn-light' %></td>
+          <td><%= link_to 'Show', nutrition_coach, class: 'btn btn-light' %></td>
+          <td><%= link_to 'Edit', edit_nutrition_coach_path(nutrition_coach), class: 'btn btn-light' %></td>
+          <td><%= link_to 'Destroy', nutrition_coach, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-light' %></td>
         </tr>
-      </thead>
-
-      <tbody>
-        <% @nutrition_coaches.each.with_index do |nutrition_coach, index| %>
-        <% index += 1 %>
-          <tr>
-            <th scope="row" style="vertical-align: middle;"><%= index %></td>
-            <td><%= mail_to nutrition_coach.email, nutrition_coach.email, class: 'btn btn-link' %></td>
-            <td><%= link_to nutrition_coach.name, nutrition_coach_path(id: nutrition_coach.id), class: 'btn btn-light' %></td>
-            <td><%= link_to 'Show', nutrition_coach, class: 'btn btn-light' %></td>
-            <td><%= link_to 'Edit', edit_nutrition_coach_path(nutrition_coach), class: 'btn btn-light' %></td>
-            <td><%= link_to 'Destroy', nutrition_coach, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-light' %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-  <!-- </div> -->
+      <% end %>
+    </tbody>
+  </table>
 </div>

@@ -1,15 +1,15 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+	<p id="notice"><%= notice %></p>
 
-<h1><%= @nutrition_client.name %></h1>
-<p><%= @nutrition_client.email %></p>
-<hr>
-<% nc = @nutrition_client %>
-<%= nc.name(nutrition_coach, nc) %>
-<%= nc.protein %>
-<%= nc.fat %>
-<%= nc.carbs %>
+	<h1><%= @nutrition_client.name.titleize %></h1>
+	<p>
+		<%= @nutrition_client.email %>
+	</p>
 
-<%= nc.active %>
-
-<%= link_to 'Edit', edit_nutrition_client_path(@nutrition_client) %> |
-<%= link_to 'Back', nutrition_clients_path %>
+	<hr>
+	<% nc = @nutrition_client %>
+	<h5>Nutrition Coach: <%= nc.nutrition_coach.try(:name).titleize %></h5>
+	<%= nc.protein %>
+	<%= nc.fat %>
+	<%= nc.carbs %>
+</div>

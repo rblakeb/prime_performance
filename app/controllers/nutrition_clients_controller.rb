@@ -1,6 +1,6 @@
 class NutritionClientsController < ApplicationController
   before_action :set_nutrition_client, only: [:show, :edit, :update, :destroy]
-  before_action :set_nutrition_coach, only: [:show]
+  # before_action :set_nutrition_coach, only: [:show]
 
   def index
     @nutrition_clients = NutritionClient.all
@@ -34,8 +34,8 @@ class NutritionClientsController < ApplicationController
   def update
     respond_to do |format|
       if @nutrition_client.update(nutrition_client_params)
-        format.html { redirect_to @nutrition_client, notice: 'Nutrition client was successfully updated.' }
-        format.json { render :show, status: :ok, location: @nutrition_client }
+        format.html { redirect_to @nutrition_clients, notice: 'Nutrition client was successfully updated.' }
+        format.json { render :show, status: :ok, location: @nutrition_clients }
       else
         format.html { render :edit }
         format.json { render json: @nutrition_client.errors, status: :unprocessable_entity }
