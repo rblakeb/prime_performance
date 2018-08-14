@@ -81,3 +81,43 @@ a.btn.btn-primary {
 		color: white;
 	}
 }
+
+div {
+  .alert.alert-notice {
+    color: #4d4f50;
+    padding: 10px;
+    background-color: #1E90FF;
+    border-radius: 0px;
+    margin: 0 auto;
+    position: fixed;
+    z-index: 9999;
+    right: 0;
+    left: 0;
+    width: auto;
+    bottom: 0%;
+    overflow-y: hidden;
+  }
+
+  .alert.alert-alert {
+    color: white;
+    padding: 10px;
+    background-color: #cc0000;
+    border-radius: 0px;
+    margin: 0 auto;
+    position: fixed;
+    z-index: 9999;
+    right: 0;
+    left: 0;
+    width: auto;
+    bottom: 0%;
+  }
+
+  .alert.alert-error {
+    color: #990000;
+    border: 2px solid #990000;
+    padding: 10px;
+    background-color: #555;
+    border-radius: 0px; 
+    margin: 0 auto;
+  }
+}

@@ -5,6 +5,11 @@
 				<li class="nav_item"><%= link_to fa_icon('instagram', class: 'fa-2x'), 'https://www.instagram.com/primeperformancesc/', title: 'Follow on Us Instagram', target: '_blank' %></li>
 				<li class="nav_item"><%= link_to fa_icon('facebook-square', class: 'fa-2x'), 'https://www.facebook.com/primeperformancesc/', title: 'Like on Us Facebook', target: '_blank' %></li>
 			</ul>
+			<div class="float-right">
+				<% if admin_signed_in? %>
+					<p class="primary-blue">Logged in as <%= current_admin.first_name %></p>
+				<% end %>
+			</div>
 		</div>
 		
 		<div class="wrapper">
