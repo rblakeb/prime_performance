@@ -1,0 +1,17 @@
+<%= form_for @nutrition_client do |f| %>
+	<div class="form-inline macros-form">
+		<%= f.label :protein %>
+		<%= f.number_field :protein, class: 'form-control' %>			
+
+		<%= f.label :fat %>
+		<%= f.number_field :fat, class: 'form-control' %>
+
+		<%= f.label :carbs %>
+		<%= f.number_field :carbs, class: 'form-control' %>
+
+		<div class="actions">
+			<%= f.submit 'Send', class: 'btn btn-primary' %>
+		</div>
+	</div>
+
+<% end %>

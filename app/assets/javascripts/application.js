@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require jquery3
 //= require popper
+//= require local-time
 //= require bootstrap-sprockets
 //= require_tree .
 
@@ -35,3 +36,13 @@ function validateWodifyLeadForm()
 		else
 	{document.getElementById('errorlocation').style.display='none';} return returnValue;
 }; 
+
+$(document).ready(function() {
+
+	// ALERT MESSAGES
+	$('.notice, .alert').show(function() {
+		// $(this).removeClass('hidden');
+		$(this).delay(2500).slideUp(500);
+	});
+
+});

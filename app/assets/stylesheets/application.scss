@@ -16,6 +16,47 @@
 @import "bootstrap";
 @import "font-awesome";
 
+body {
+  min-height: 100vh;
+}
+
+.container {
+  min-height: 100vh;
+}
+
+footer {
+  background-color: #4d4f50;
+
+  div.col-md-12.py-5 {
+    text-align: center;
+    padding: 16px;
+  }
+
+  .btn.sign-up, .btn.sign-out {
+  color: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  right: 5px;
+  position: relative;
+  float: right;
+
+  &:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+}
+
+
+  .btn.sign-in {
+    color: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    &:hover {
+      color: #ffffff;
+      border-color: #ffffff;
+    }
+  }
+}
+
 p {
 	color: #777777;
 }
@@ -46,33 +87,6 @@ hr {
 	}
 }
 
-.alert-notice, .alert-success {
-  padding: 15px;
-  margin-bottom: 0 auto;
-  border: 1px solid transparent;
-  border-radius: 3px;
-  position: fixed;
-  z-index: 99999;
-  left: 50%;
-  top: 10%;
-  min-width: 180px;
-  text-align: center;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  background-color: #2996cc;
-}
-
-.alert-danger {
-  padding: 15px;
-  border-radius: 3px;
-  margin: 0 auto;
-  position: absolute;
-  z-index: 99999;
-  right: 20%;
-  left: 20%;
-  width: auto;
-  text-align: center;
-}
 
 a.btn.btn-primary {
 	color: white;
@@ -82,42 +96,68 @@ a.btn.btn-primary {
 	}
 }
 
-div {
+
+
   .alert.alert-notice {
-    color: #4d4f50;
     padding: 10px;
-    background-color: #1E90FF;
-    border-radius: 0px;
-    margin: 0 auto;
+    margin: 0;
+    border-radius: 0;
     position: fixed;
-    z-index: 9999;
+    z-index: 99999;
+    width: 100vw;
+    text-align: center;
+    background-color: #2996cc;
+    bottom: 0;
     right: 0;
     left: 0;
-    width: auto;
-    bottom: 0%;
-    overflow-y: hidden;
+
+    p {
+      color: #ffffff;
+    }
   }
 
   .alert.alert-alert {
-    color: white;
     padding: 10px;
-    background-color: #cc0000;
-    border-radius: 0px;
-    margin: 0 auto;
+    margin: 0;
+    border-radius: 0;
     position: fixed;
-    z-index: 9999;
+    z-index: 99999;
+    width: 100vw;
+    text-align: center;
+    color: #ffffff;
+    background-color: #2996cc;
+    bottom: 0;
     right: 0;
     left: 0;
-    width: auto;
-    bottom: 0%;
+
+    p {
+      color: #ffffff;
+    }
   }
 
   .alert.alert-error {
-    color: #990000;
+    color: #ffffff;
     border: 2px solid #990000;
     padding: 10px;
     background-color: #555;
     border-radius: 0px; 
     margin: 0 auto;
   }
+
+
+div#error_explanation {
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  background-color: #990000;
+  border-radius: 5px; 
+  margin: 0 auto;
+}
+
+.hidden {
+  visibility: false;
+}
+
+div.actions {
+  margin: 10px;
 }

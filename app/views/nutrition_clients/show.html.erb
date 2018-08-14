@@ -1,15 +1,17 @@
 <div class="container">
-	<p id="notice"><%= notice %></p>
-
-	<h1><%= @nutrition_client.name.titleize %></h1>
-	<p>
-		<%= @nutrition_client.email %>
-	</p>
+<% nc = @nutrition_client %>
+	<h1>
+		<%= nc.name.titleize %> | 
+			<small class="text-muted">Nutrition coach: <%= nc.nutrition_coach.try(:name).titleize %></small>
+		</h1>
 
 	<hr>
-	<% nc = @nutrition_client %>
-	<h5>Nutrition Coach: <%= nc.nutrition_coach.try(:name).titleize %></h5>
-	<%= nc.protein %>
-	<%= nc.fat %>
-	<%= nc.carbs %>
+
+	<%= render 'macros' if current_admin == nc.nutrition_coach %>
+
+	<h3>Today's totals</h3>
+	Protein: <p class="protein-goal"><%= nc.protein %></p>
+	Fat: <p class="fat-goal"><%= nc.fat %></p>
+	Carbs: <p class="carbs-goal"><%= nc.carbs %></p>
+	Total Calories: <p class="total-cals">0</p>
 </div>
