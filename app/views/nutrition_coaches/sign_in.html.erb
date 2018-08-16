@@ -1,0 +1,28 @@
+<div class="container">
+  <h2>Log in</h2>
+<hr>
+  <%= form_tag 'nutrition_coaches/sign_in' do |f| %>
+    <div class="form-group">
+      <%= f.label_tag :email %><br />
+      <%= f.email_field_tag :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label_tag :password %><br />
+      <%= f.password_field_tag :password, autocomplete: "off", class: 'form-control' %>
+    </div>
+
+    <% if devise_mapping.rememberable? -%>
+      <div class="form-group">
+        <%= f.check_box_tag :remember_me %>
+        <%= f.label_tag :remember_me %>
+      </div>
+    <% end -%>
+
+    <div class="actions">
+      <%= f.submit_tag "Log in", class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+
+  <%= render "admins/shared/links" %>
+</div>

@@ -161,3 +161,54 @@ div#error_explanation {
 div.actions {
   margin: 10px;
 }
+/* FOOTER */
+.btn.sign-up, .btn.sign-out {
+  color: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  right: 10px;
+  top:10px;
+  position: relative;
+  float: right;
+
+  &:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+}
+
+.btn.sign-in {
+  color: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  top: 10px;
+  left: 10px;
+  position: relative;
+
+  &:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+}
+
+.footer-copyright {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+i.fa.fa-facebook.fa-3x {
+  color: rgba(255, 255, 255, 0.4); 
+  margin-right: 1rem;
+
+  &:hover {
+    color: #4267b2;
+  }
+}
+
+i.fa.fa-instagram.fa-3x {
+  color: rgba(255, 255, 255, 0.4); 
+
+  &:hover {
+    background: -webkit-linear-gradient(#8F55D4, #F91906, #F9E706);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+

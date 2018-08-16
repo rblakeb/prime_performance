@@ -38,7 +38,9 @@ body {
 				color: #777777;
 
 				&:hover {    
-				    color: #FF0087;
+				    background: -webkit-linear-gradient(#8F55D4, #F91906, #F9E706);
+    				-webkit-background-clip: text;
+    				-webkit-text-fill-color: transparent;
 				}
 			}
 		}

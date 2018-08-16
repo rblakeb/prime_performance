@@ -1,5 +1,6 @@
 class NutritionCoachesController < ApplicationController
   before_action :set_nutrition_coach, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_admin!
 
   def index
     @nutrition_coaches = NutritionCoach.all
@@ -50,6 +51,18 @@ class NutritionCoachesController < ApplicationController
     end
   end
 
+  def sign_in
+    user = NutritionCoach.find_by(email: params[:email])
+    if user && user.authenticate(params[:password])
+      session[:nutrition_coach_id] = user.id
+      flash[:success] = "Logged In!"
+        redirect_back_or(root)
+    else
+      flash.now[:danger] = "Email and password did not match. Please try again."
+      render :back
+    end
+  end
+
   private
 
     def set_nutrition_coach
@@ -58,6 +71,6 @@ class NutritionCoachesController < ApplicationController
 
 
     def nutrition_coach_params
-      params.require(:nutrition_coach).permit(:email, :name, :password)
+      params.require(:nutrition_coach).permit(:id, :email, :name, :password)
     end
 end

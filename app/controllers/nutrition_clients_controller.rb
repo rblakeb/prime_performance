@@ -1,6 +1,5 @@
 class NutritionClientsController < ApplicationController
   before_action :set_nutrition_client, only: [:show, :edit, :update, :destroy]
-  # before_action :set_nutrition_coach, only: [:show]
   before_action :authenticate_admin!
 
   def index

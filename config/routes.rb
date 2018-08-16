@@ -6,9 +6,12 @@ Rails.application.routes.draw do
     passwords: 'admins/passwords'
   }
 
-  resources :nutrition_coaches
-  resources :nutrition_clients
+  # resources :nutrition_coaches
+  # resources :nutrition_clients
+
   root 'pages#index'
 
   get '/contact', to: 'pages#contact', as: "contact"
+
+  get 'nutrition_coaches/sign_in', to: 'nutrition_coaches#sign_in'
 end

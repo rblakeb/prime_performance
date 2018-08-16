@@ -1,25 +1,33 @@
 <div class="container">
 	<div class="row">
-		<div class="col-md-6">
-			<p id="notice"><%= notice %></p>
+		<div class="col-md-12">
 
-			<h1><%= @nutrition_coach.name %></h1>
+			<h1>
+				<%= @nutrition_coach.name %>
+				<div class="pull-right">
+					<%= link_to 'Edit', edit_nutrition_coach_path(@nutrition_coach), class: 'btn btn-primary' %> |
+					<%= link_to 'Back', nutrition_coaches_path, class: 'btn btn-light' %>		
+				</div>
+			</h1>
 <hr>
 			<p>
 			  <strong>Email:</strong>
-			  <%= @nutrition_coach.email %>
+			  <%= mail_to @nutrition_coach.email %>
 			</p>
-
-			<p>
-			  <strong>Name:</strong>
-			  <%= @nutrition_coach.name %>
-			</p>
-
-			<%= link_to 'Edit', edit_nutrition_coach_path(@nutrition_coach) %> |
-			<%= link_to 'Back', nutrition_coaches_path %>
-		</div>
-		<div class="col-md-6">
 			
+		</div>
+		<div class="col-md-12">
+			<h2>Clients:</h2>
+			<hr>
+			<% @nutrition_coach.nutrition_clients.each.with_index do |n, index| %>
+			<% index += 1 %>
+			<table>
+				<tr>
+					<td><%= index %></td>
+					<td><%= link_to n.name, n, class: 'btn btn-link' %></td>
+				</tr>
+			</table>
+			<% end %>
 		</div>
 	</div>
 </div>
