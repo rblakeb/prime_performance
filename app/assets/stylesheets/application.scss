@@ -22,10 +22,13 @@ body {
 
 .container {
   min-height: 100vh;
+  /*max-width: 100vw;
+  min-width: 100vw*/;
 }
 
 footer {
   background-color: #4d4f50;
+  margin-top: 15px;
 
   div.col-md-12.py-5 {
     text-align: center;

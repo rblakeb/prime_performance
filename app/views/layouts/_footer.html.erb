@@ -1,37 +1,28 @@
-<!-- Footer -->
-<footer class="page-footer font-small cyan darken-3">
 
-  <%= link_to 'Sign In', new_admin_session_path, class: 'btn transparent sign-in nav_item', title: 'Sign In', alt: 'Sign In' unless current_admin %>
-  <%= link_to 'Account Settings', edit_admin_registration_path, class: 'btn transparent sign-in nav_item', title: 'Account Settings' if current_admin %>
-  <%= link_to 'Register for our free newsletter', new_admin_registration_path, class: 'btn transparent sign-up nav_item', title: 'Register', alt: 'Register' unless current_admin %>
-  <%= link_to 'Sign Out', destroy_admin_session_path, method: :delete, class: 'btn transparent sign-out nav_item', title: 'Sign Out' if current_admin %>
-
-      <!-- Grid row-->
-      <div class="row">
-
-        <!-- Grid column -->
-        <div class="col-md-12 py-5">
-          <div class="mb-5 flex-center">
-
-            <!-- Facebook -->
-            <a class="fb-ic">
-              <%= link_to fa_icon('facebook', class: 'fa-3x'), 'https://www.facebook.com/primeperformancesc', title: 'Like us on Facebook' %>
-            </a>
-            <!--Instagram-->
-            <a class="ins-ic">
-              <%= link_to fa_icon('instagram', class: 'fa-3x'), 'https://www.instagram.com/primeperformancesc', title: 'Follow us on Instagram' %>
-            </a>
-          </div>
-        </div>
-        <!-- Grid column -->
-
-      </div>
-      <!-- Grid row-->
-
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2018 Copyright Prime Performance S&C, LLC
-    </div>
-    <!-- Copyright -->
-
-  </footer>
   <!-- Footer -->
+  <footer class="page-footer font-small cyan darken-3">
+
+    <!-- Grid column -->
+    <div class="col-md-12 py-5">
+      <div class="mb-5 flex-center">
+
+        <!-- Facebook -->
+        <a class="fb-ic">
+          <%= link_to fa_icon('facebook', class: 'fa-3x'), 'https://www.facebook.com/primeperformancesc', title: 'Like us on Facebook' %>
+        </a>
+        <!--Instagram-->
+        <a class="ins-ic">
+          <%= link_to fa_icon('instagram', class: 'fa-3x'), 'https://www.instagram.com/primeperformancesc', title: 'Follow us on Instagram' %>
+        </a>
+      </div>
+    </div>
+    <!-- Grid column -->
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">© 2018 Copyright Prime Performance S&C, LLC
+      </div>
+      <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+    

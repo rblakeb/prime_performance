@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="<%= yield_meta_tag(:description, 'Oklahoma Weightlifting Club is Oklahoma\'s #1 source for Fitness, Olympic Weightlifting, Strength and Conditioning, and general strength development classes as well as Personal Training. We also offer online programming and coaching for your individual needs.') %>">
+    <meta name="description" content="<%= yield_meta_tag(:description, 'Prime Performance is Oklahoma\'s best source for CrossFit, Olympic Weightlifting, Strength and Conditioning for athletes, and general strength development through group training and Personal Training. We help aleviate back pain, increase strength, provide nutrition consulting and more.') %>">
     <title>
       <%= if content_for?(:title) then yield(:title) + ' | ' end %>
-      Prime Performance
+      Prime Performance | Strength and Conditioning, CrossFit, Olympic Weightlifting, strength development, nutrition
     </title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <%= favicon_link_tag 'favicon.ico' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
