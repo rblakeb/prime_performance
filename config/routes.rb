@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   root 'pages#index'
 
   get '/contact', to: 'pages#contact', as: "contact"
+  get '/coaches', to: 'pages#coaches', as: "coaches"
+  get '/packages', to: 'pages#packages', as: "packages"
 
   get 'nutrition_coaches/sign_in', to: 'nutrition_coaches#sign_in'
 end

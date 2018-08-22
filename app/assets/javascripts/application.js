@@ -12,7 +12,6 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
 //= require jquery3
 //= require popper
 //= require local-time
@@ -44,5 +43,15 @@ $(document).ready(function() {
 		// $(this).removeClass('hidden');
 		$(this).delay(2500).slideUp(500);
 	});
+
+	// NAVBAR SLIDER
+
+	// $(document).on('turbolinks:load', function() {
+
+	  $('.fa.fa-bars.fa-2x,.sliding-panel-fade-screen,.sliding-panel-close').on('click touchstart',function (e) {
+	    $('.main-menu,.sliding-panel-fade-screen').toggleClass('is-visible');
+	    e.preventDefault();
+	  });
+	// });
 
 });

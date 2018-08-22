@@ -1,0 +1,13 @@
+<i class="fa fa-bars fa-2x menu-button"></i>
+
+<nav class="main-menu">
+  <% if current_admin %>
+    <p>Logged in as <%= admin.name %></p>
+  <% end %>
+  <ul>
+    <li><%= link_to 'Packages', packages_path %></li>
+    <li><%= link_to 'Contact', contact_path %></li>
+  </ul>
+</nav>
+
+<div class="main-menu-screen sliding-panel-fade-screen"></div>

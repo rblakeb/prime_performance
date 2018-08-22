@@ -4,4 +4,10 @@ class PagesController < ApplicationController
 
   def contact
   end
+
+  def coaches
+  end
+
+  def packages
+  end
 end

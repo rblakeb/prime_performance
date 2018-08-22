@@ -1,0 +1,70 @@
+<div id="packages" class="home-section-4">				
+	<h1>
+		Packages
+		<div class="float-right">
+			<%= link_to "Contact Us <i class='fa fa-envelope fa-1x'></i>".html_safe, contact_path, class: 'btn btn-light' %>
+		</div>	
+	</h1>
+<hr>
+		<div class="container">
+			<div class="row justify-content-center">
+					<div class="card col-md-3">
+					  <div class="card-body">
+					    <h4 class="card-title"><strong>Basic Package</strong> - $99/month</h4>
+					  </div>
+					  <ul class="list-group list-group-flush">
+					    <li class="list-group-item"><p>Unlimited access to classes</p></li>
+					    <li class="list-group-item"><p>Access to open gym hours</p></li>
+					  </ul>
+					  <div class="card-body">
+					    <%= link_to 'I want this', contact_path, class: 'btn btn-primary' %>
+					  </div>
+					</div>
+				
+					<div class="card col-md-3">
+					  <div class="card-body">
+					    <h4 class="card-title"><strong>"Train & Maintain"</strong> - $149/month</h4>
+					  </div>
+					  <ul class="list-group list-group-flush">
+					    <li class="list-group-item"><p>Unlimited access to classes</p></li>
+					    <li class="list-group-item"><p>Includes <strong>2 free chiropractor visits</strong> per month at <%= link_to 'F5 Chiropractic', 'https://www.f5chiropractic.com/', class: 'card-link', target: '_blank' %></p></li>
+					    <li class="list-group-item"><p>Access to open gym hours</p></li>
+					  </ul>
+					<div class="card-body">
+					   <%= link_to 'I want this', contact_path, class: 'btn btn-primary' %>
+					  </div>
+					</div>
+
+					<div class="card col-md-3">
+					  <div class="card-body">
+					    <h4 class="card-title"><strong>"Train & Gain"</strong> - $149/month</h4>
+					  </div>
+					  <ul class="list-group list-group-flush">
+					    <li class="list-group-item"><p>Unlimited access to classes</p></li>
+					    <li class="list-group-item"><strong><p>Get a personal nutrition coach</p></strong></li>
+					    <li class="list-group-item"><p>Access to open gym hours</p></li>
+					    <li class="list-group-item"><p>Limited spots available!</p></li>
+					  </ul>
+					  <div class="card-body">
+					    <%= link_to 'I want this', contact_path, class: 'btn btn-primary' %>
+					  </div>
+					</div>
+
+						<div class="card text-center col-md-10">
+						  <div class="card-header">
+						    <h2><srong>Prime Package</srong></h2>
+						  </div>
+						  <div class="card-body">
+						    <h5 class="card-title">$199/month</h5>
+						    <p class="card-text">Enjoy the benefits of getting the best chiropractic care in the area as well as your own nutrition coach to keep you accountable with what you're eating!</p>
+						  	<%= link_to 'I want this', contact_path, class: 'btn btn-primary btn-lg' %>
+						  </div>
+						  <div class="card-footer text-muted">
+						    Only for people who are serious about their health
+						  </div>
+						</div>
+
+						<p class="text-center">*Minimum 3-month commitment for "Train & Gain" and "Prime Package"</p>
+					</div>
+				</div>
+</div>

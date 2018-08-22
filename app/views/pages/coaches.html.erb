@@ -1,0 +1,44 @@
+<div id="coaches-page" class="home-section-3">		
+	<h1>
+		Coaches
+		<div class="float-right">
+			<%= link_to "See packages <i class='fa fa-arrow-right fa-1x'></i>".html_safe, packages_path, class: 'btn btn-light' %>
+		</div>	
+	</h1>
+	<hr>
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="card col-md-3">
+				  <%= image_tag 'logo_black.png', class: 'card-img-top', alt: 'card' %>
+				  <div class="card-body">
+				    <h5 class="card-title">Blake Barnes, B.S. (Kinesiology)</h5>
+				    <p class="card-text">Owner/Coach</p>
+				    <p class="card-text">Former strength & conditioning coach at Stanford University and East Central University</p>
+				    <p class="card-text">National-level Olympic weightlifter</p>
+				    <p class="card-text">Former collegiate football player (ECU)</p>
+				    <%= link_to 'Contact', contact_path, class: 'btn btn-primary' %>
+				  </div>
+				</div>
+				<div class="card col-md-3">
+				  <%= image_tag 'logo_black.png', class: 'card-img-top', alt: 'card' %>
+				  <div class="card-body">
+				    <h5 class="card-title">Alyssa Sulay, B.S. (Kinesiology)</h5>
+				    <p class="card-text">Owner/Coach</p>
+				    <p class="card-text">Former Snatch silver medalist (2015 Nationals)</p>
+				    <p class="card-text">Former national-level Weightlifter</p>
+				    <p class="card-text">Former member of the Catalyst Athletics seminar staff</p>
+				    <p class="card-text">Former college softball player (San Jose State University)</p>
+				    <%= link_to 'Contact', contact_path, class: 'btn btn-primary' %>
+				  </div>
+				</div>
+				<div class="card col-md-3">
+				  <%= image_tag 'logo_black.png', class: 'card-img-top', alt: 'card' %>
+				  <div class="card-body">
+				    <h5 class="card-title">Britni Tallman</h5>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <%= link_to 'Contact', contact_path, class: 'btn btn-primary' %>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
