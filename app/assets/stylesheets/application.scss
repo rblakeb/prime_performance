@@ -215,7 +215,7 @@ i.fa.fa-instagram.fa-3x {
   }
 }
 
-/* NAVBAR */
+/* SLIDING PANEL NAVBAR */
 
 .main-menu {
   $action-color: #1E90FF !default;
@@ -278,9 +278,13 @@ i.fa.fa-instagram.fa-3x {
   transition: all 0.2s ease-in-out;
   visibility: hidden;
   z-index: 999998;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 
   &.is-visible {
-    opacity: 0.4;
+    opacity: 0.6;
     visibility: visible;
   }
 }
@@ -299,6 +303,10 @@ i.fa.fa-instagram.fa-3x {
   color: #999999;
   z-index: 99999;
   padding: 13px;
+
+  &:hover {
+    color: darken(#999999, 10%);
+  }
 
   img {
     height: 1.3em;
