@@ -1,6 +1,7 @@
 class BlogsController < ApplicationController
   
-before_action :set_blog, only: [:show, :edit, :update]
+before_action :set_blog, only: [:show, :edit, :update, :delete]
+before_action :authenticate_admin!, only: [:new, :edit, :delete]
 
   def index
   	@blogs = if params[:tag]
@@ -11,6 +12,7 @@ before_action :set_blog, only: [:show, :edit, :update]
   end
 
   def show
+    fresh_when last_modified: @blog.updated_at
   end
 
   def new
@@ -41,7 +43,28 @@ before_action :set_blog, only: [:show, :edit, :update]
     end
   end
 
+  def delete
+
+  end
+
+  def destroy
+    @blog = Blog.find(params[:id]).destroy
+
+    respond_to do |format|
+      format.html { redirect_to blogs_path, notice: 'Blog successfully deleted' }
+      format.json { head :ok } 
+      format.js
+    end
+  end
+
   private
+
+  def authenticate_admin!
+    unless current_admin
+      redirect_back(fallback_location: root_path)
+      flash[:notice] = "Sorry, you can't do that"
+    end
+  end
 
   def set_blog
   	@blog = Blog.find(params[:id])

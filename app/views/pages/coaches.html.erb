@@ -1,9 +1,6 @@
 <div id="coaches-page" class="home-section-3">		
 	<h1>
 		Coaches
-		<div class="float-right">
-			<%= link_to "See packages <i class='fa fa-arrow-right fa-1x'></i>".html_safe, packages_path, class: 'btn btn-light' %>
-		</div>	
 	</h1>
 	<hr>
 		<div class="container">
@@ -39,6 +36,9 @@
 				    <%= link_to 'Contact', contact_path, class: 'btn btn-primary' %>
 				  </div>
 				</div>
+				<div class="col-md-10">
+					<%= link_to "See packages <i class='fa fa-arrow-right fa-1x'></i>".html_safe, packages_path, class: 'btn btn-light see-packages-button' %>
+				</div>	
 			</div>
 		</div>
 	</div>

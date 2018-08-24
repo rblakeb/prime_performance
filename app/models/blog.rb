@@ -2,6 +2,16 @@ class Blog < ApplicationRecord
 	has_many :taggings
 	has_many :tags, through: :taggings
 
+  default_scope { order('created_at DESC') }
+
+	def slug
+    self.name.downcase.gsub(" ", "-")
+  end
+
+  def to_param
+    "#{id}-#{slug}"
+  end
+
 	def self.tagged_with(name)
     	Tag.find_by!(name: name).blogs
   	end

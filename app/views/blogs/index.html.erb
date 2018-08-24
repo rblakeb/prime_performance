@@ -2,26 +2,35 @@
 	<% title 'Blog' %>
 	<% meta_tag :description, 'Strength, Conditioning, Olympic Weightlifting, Fitness and Nutrition blog from Prime Performance coaches' %>
 
-	<h1>Blog Posts</h1>
+	<h1>
+		Blog Posts
+		<p><%= link_to "New Blog", new_blog_path, class: 'btn btn-primary top-action-button' if current_admin %></p>
+	</h1>
 
 	<hr>
 
-	<div id="tag_cloud">
-	  <% tag_cloud Blog.tag_counts, %w[s m l] do |tag, css_class| %>
-	    <%= link_to tag.name, tag_path(tag.name), class: css_class %>
-	  <% end %>
-	</div>
+		<% if @blogs.present? %>
 
-	<div id="blogs">
-	  <% @blogs.each do |blog| %>
-	    <h2><%= link_to blog.name, blog %></h2>
-	    <%= simple_format blog.content %>
-	    <p>
-	      Tags: <%= raw blog.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %>
-	    </p>
-	    <p><%= link_to "Edit Blog", edit_blog_path(blog) %></p>
-	  <% end %>
-	</div>
+		<!-- TAG CLOUD -->
+			<div id="tag_cloud">
+				<p>Filter by tag: </p>
+			  <% Tag.all.each do |tag| %>
+			  	<% cache tag do %>
+			   		<%= link_to tag.name, tag_path(tag.name), class: 'tag-cloud-button btn btn-light' %>
+			  	<% end %>
+			  <% end %>
+			</div>
+			<hr>
+			<!-- RENDER BLOGS -->
+			<div id="blogs">
+			  
+			  <%= render partial: 'blog', collection: @blogs, cached: true %>
+			  
+			</div>
 
-	<p><%= link_to "New Blog", new_blog_path %></p>
+		<% else %>
+
+		<p class="text-center">We're currently thinking up some awesome stuff for you.</p>
+
+		<% end %>
 </div>

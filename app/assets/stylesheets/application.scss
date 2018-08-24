@@ -26,6 +26,10 @@ body {
   min-width: 100vw;*/
 }
 
+h1 {
+  margin: 1rem;
+}
+
 footer {
   background-color: #404040;
   margin-top: 15px;
@@ -68,7 +72,7 @@ hr {
 	border: 0;
 	clear: both;
 	display: block;
-	width: 96%;               
+	width: 100%;               
 	background-color: #eeeeee;
 	height: 1px;
 }

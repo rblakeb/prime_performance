@@ -11,11 +11,12 @@ def title(text)
     content_for?(:"meta_#{tag}") ? content_for(:"meta_#{tag}") : default_text
   end
 
-  def tag_cloud(tags, classes)
+  def tag_cloud(tags)
     max = tags.max_by(&:count)
     tags.each do |tag|
-      index = tag.count.to_f / max.count * (classes.size - 1)
-      yield(tag, classes[index.round])
+      # index = tag.count.to_f / max.count * (classes.size - 1)
+      # yield(tag, classes[index.round])
+      tag.name
     end
   end
 end
