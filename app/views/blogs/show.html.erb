@@ -1,0 +1,6 @@
+<div class="container">
+	<h1><%= @blog.name %></h1>
+	<hr>
+	Tags: <%= @blog.tags.collect {|t| t.name} %>
+	<p><%= @blog.content %></p>
+</div>

@@ -1,0 +1,27 @@
+<div class="container">
+	<% title 'Blog' %>
+	<% meta_tag :description, 'Strength, Conditioning, Olympic Weightlifting, Fitness and Nutrition blog from Prime Performance coaches' %>
+
+	<h1>Blog Posts</h1>
+
+	<hr>
+
+	<div id="tag_cloud">
+	  <% tag_cloud Blog.tag_counts, %w[s m l] do |tag, css_class| %>
+	    <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+	  <% end %>
+	</div>
+
+	<div id="blogs">
+	  <% @blogs.each do |blog| %>
+	    <h2><%= link_to blog.name, blog %></h2>
+	    <%= simple_format blog.content %>
+	    <p>
+	      Tags: <%= raw blog.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %>
+	    </p>
+	    <p><%= link_to "Edit Blog", edit_blog_path(blog) %></p>
+	  <% end %>
+	</div>
+
+	<p><%= link_to "New Blog", new_blog_path %></p>
+</div>

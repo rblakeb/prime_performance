@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
  
+  # get 'blog', to: 'blogs#index', as: 'blogs'
+  # get 'blogs/new', to: 'blogs#new', as: 'new_blog'
+  # get 'blogs/show/:id', to: 'blogs#show', as: 'blog'
+  # get 'blogs/edit', to: 'blogs#edit', as: 'edit_blog'
+
+  resources :blogs
+
+  get 'tags/:tag', to: 'blogs#index', as: :tag
+
   devise_for :admins, controllers: {
   	sessions: 'admins/sessions',
   	registrations: 'admins/registrations',
