@@ -1,5 +1,9 @@
 class ApplicationController < ActionController::Base
 
+  def current_page?
+    current_page?(path)
+  end
+
 	# Devise redirects
 
 	def store_current_location

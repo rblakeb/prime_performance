@@ -5,11 +5,24 @@
     <p class="primary-blue">Logged in as <%= current_admin.name %></p>
   <% end %>
   <ul>
-  	<li><%= link_to 'Coaches', coaches_path %></li>
-    <li><%= link_to 'Packages', packages_path %></li>
-    <li><%= link_to 'Contact', contact_path %></li>
-    <li><%= link_to 'Blog', blogs_path %></li>
-    <li><%= link_to 'Sign Out', destroy_admin_session_path, method: :delete if current_admin %></li>
+    <li class="<%= 'active' if current_page?(root_path) %>">
+      <%= link_to 'Home', root_path %>
+    </li>
+  	<li class="<%= 'active' if current_page?(coaches_path) %>">
+      <%= link_to 'Coaches', coaches_path %>
+    </li>
+    <li class="<%= 'active' if current_page?(packages_path) %>">
+      <%= link_to 'Packages', packages_path %>
+    </li>
+    <li class="<%= 'active' if current_page?(contact_path) %>">
+      <%= link_to 'Contact', contact_path %>
+    </li>
+    <li class="<%= 'active' if current_page?(blogs_path) %>">
+      <%= link_to 'Blog', blogs_path %>
+    </li>
+    <li>
+      <%= link_to 'Sign Out', destroy_admin_session_path, method: :delete if current_admin %>
+    </li>
   </ul>
 </nav>
 

@@ -256,8 +256,8 @@ i.fa.fa-instagram.fa-3x {
     border-bottom: $sliding-panel-border;
     color: $sliding-panel-color;
     display: block;
-    font-weight: bold;
-    padding: 1em;
+    /*font-weight: bold;*/
+    padding: 2em;
     text-decoration: none;
 
     &:focus {
@@ -268,6 +268,11 @@ i.fa.fa-instagram.fa-3x {
       background-color: $sliding-panel-background-hover;
       color: $sliding-panel-color-hover;
     }
+  }
+
+  .active {
+    font-weight: bold;
+    color: #1E90FF;
   }
 
   &.is-visible {
@@ -317,3 +322,13 @@ i.fa.fa-instagram.fa-3x {
   }
 }
 
+.app-home-button {
+  top: 5%;
+  left: 3%;
+  position: absolute;
+  margin: 0;
+
+  img {
+    width: 45px;
+  }
+}
