@@ -1,18 +1,18 @@
 
 <div class="home-section-1">
-	<!-- <nav class="navbar navbar-expand-lg"> -->
+	<%= image_tag 'website_cover.jpg', class: 'img-fluid' %>
 		<ul class="social-icons">
 			<li class="nav-item"><%= link_to fa_icon('instagram', class: 'fa-2x'), 'https://www.instagram.com/primeperformancesc/', title: 'Follow on Us Instagram', target: '_blank' %></li>
 			<li class="nav-item"><%= link_to fa_icon('facebook-square', class: 'fa-2x'), 'https://www.facebook.com/primeperformancesc/', title: 'Like on Us Facebook', target: '_blank' %></li>
 		</ul>
+		<ul class="nav justify-content-center">
+			<li class="nav-item">
+					<%= link_to 'I want to be awesome', contact_path, class: 'btn btn-primary' %>
+			</li>
+		</ul>
 </div>
 
 <div class="wrapper">
-	<ul class="nav justify-content-center">
-				<li class="nav-item">
-					<%= link_to 'I want to be awesome', contact_path, class: 'btn btn-primary' %>
-				</li>
-			</ul>
 	<div class="home-section-2">
 				<p class="lead mission-statement">
 					<em>

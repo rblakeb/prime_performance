@@ -1,12 +1,15 @@
 .home-section-1 {
 	min-height: 100vh;
 	min-width: 100vw;
-	background: url('website_cover.jpg') no-repeat;
-	background-size: cover;
+	/*background: url('website_cover.jpg') no-repeat;*/
+	/*background-size: cover;*/
 }
 
 .social-icons {
 	display: inline-flex;
+	top: 10px;
+	position: absolute;
+
 		.nav-item {
 			z-index: 99997;
 			position: relative;
@@ -44,6 +47,8 @@
 
  	.btn.btn-primary {
  		margin-right: 8px;
+ 		bottom: 10px;
+ 		/*position: absolute;*/
  	}
 }
 
