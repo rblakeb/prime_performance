@@ -3,7 +3,7 @@
 	min-width: 100vw;
 	/*background: url('website_cover.jpg') no-repeat;*/
 	/*background-size: cover;*/
-}
+
 
 .social-icons {
 	display: inline-flex;
@@ -35,6 +35,7 @@
 			}
 		}
 	}
+}
 
 .nav.justify-content-center {
 	display: flex;
@@ -83,6 +84,41 @@ div.home-section-3 {
    div.card.col-3 {
    	margin: 10px 15px;
    }
+}
+
+/*CONTACT PAGE*/
+
+div.contact-info.col-4.pull-right {
+	ul.social-icons {
+		display: inline-flex;
+		top: 10px;
+		position: relative;
+
+		.nav-item {
+			z-index: 99997;
+			position: relative;
+			display: inline-flex;
+			margin-top: 15px;
+			margin-right: 5px;
+
+			.fa-facebook-square {
+				color: #777777;
+
+				&:hover {
+					color: #4267b2;
+				}
+			}
+			.fa-instagram {
+				color: #777777;
+
+				&:hover {    
+				    background: -webkit-linear-gradient(#8F55D4, #F91906, #F9E706);
+    				-webkit-background-clip: text;
+    				-webkit-text-fill-color: transparent;
+				}
+			}
+		}
+	}
 }
 
 div.home-section-4 {
