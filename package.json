@@ -1,5 +1,11 @@
 {
-  "name": "prime_performance",
-  "private": true,
-  "dependencies": {}
+  "name": "yarn",
+  "private": false,
+  "dependencies": {},
+  "version": "yarn",
+  "description": "yarn",
+  "main": "yarn",
+  "repository": "Y",
+  "author": "Y",
+  "license": "Y"
 }
