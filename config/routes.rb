@@ -1,9 +1,4 @@
 Rails.application.routes.draw do
- 
-  # get 'blog', to: 'blogs#index', as: 'blogs'
-  # get 'blogs/new', to: 'blogs#new', as: 'new_blog'
-  # get 'blogs/show/:id', to: 'blogs#show', as: 'blog'
-  # get 'blogs/edit', to: 'blogs#edit', as: 'edit_blog'
 
   resources :blogs
 
@@ -23,6 +18,7 @@ Rails.application.routes.draw do
   get '/contact', to: 'pages#contact', as: "contact"
   get '/coaches', to: 'pages#coaches', as: "coaches"
   get '/packages', to: 'pages#packages', as: "packages"
+  get '/waiver', to: 'pages#waiver', as: "waiver"
 
   get 'nutrition_coaches/sign_in', to: 'nutrition_coaches#sign_in'
 end
