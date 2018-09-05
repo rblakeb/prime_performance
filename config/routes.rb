@@ -20,5 +20,5 @@ Rails.application.routes.draw do
   get '/packages', to: 'pages#packages', as: "packages"
   get '/waiver', to: 'pages#waiver', as: "waiver"
 
-  get 'nutrition_coaches/sign_in', to: 'nutrition_coaches#sign_in'
+  # get 'nutrition_coaches/sign_in', to: 'nutrition_coaches#sign_in'
 end
