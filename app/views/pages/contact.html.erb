@@ -1,7 +1,7 @@
 <% title 'Contact' %>
 <% meta_tag :description, 'Contact us to join' %>
 
-		<h1 class="contact-title col-12">
+		<h1 class="contact-title col-10">
 			Send us a message!
 		</h1>
 <hr>
@@ -22,49 +22,63 @@
 			</div>
 
 
-		<form action="https://app.wodify.com/API/WebToLeadFormPostEntry_v1.aspx?" accept-charset="UTF-8" method="POST" id="wodifyLeadForm" class="col-8 pull left" name="wodifyLeadForm" onsubmit="return validateWodifyLeadForm();">
+<div class="col-6">
+	<form action="https://app.wodify.com/API/WebToLeadFormPostEntry_v1.aspx?" accept-charset="UTF-8" method="POST" id="wodifyLeadForm" name="wodifyLeadForm" onsubmit="return validateWodifyLeadForm();">
+<br/>
 
-		<div class="form-group">	
-			<label for="name">*Name</label>
-
-			<input type="text" class="form-control" name="name" maxlength="50" required data-required>
-			</input><span id="errorname" name="errorname" style="display: none; color: #cc2626;"> Required field!</span>
-		</div>
-		<div class="form-group">
-			<label for="email">
-				*Email
-			</label>
-			<input type="email" class="form-control" name="email" maxlength="250" required data-required>
-
-			</input><span id="erroremail" name="erroremail" style="display: none; color: #cc2626;"> Required field!</span>
-		</div>
-		<div class="form-group">
-			<label for="location">
-				*Location
-			</label>
-			<select name="location" class="form-control" required>
-				<option value="">-</option>
-				<option value="3338" selected="selected">CrossTowne LifeFit</option>
-			</select><span id="errorlocation" name="errorlocation" style="display: none; color: #cc2626;"> Required field!</span>
-		</div>
-		<div class="form-group">
-			<label for="dateofbirth">
-				Date Of Birth
-			</label>
-			<input type="date" class="form-control" name="dateofbirth">
-				
-			</input>
-		</div>
-		<div class="form-group">
-			<label for="comments">
-				Comments
-			</label>
-			<textarea name="comments" class="form-control" maxlength="2000" rows="4" cols="50"></textarea>
-				<input type="hidden" name="redirecturl" value="http://www.crosstownelifefit.com">
-		</div>
-				<input type="hidden" name="apikey" value="uahbal0k5c">
-				<input type="submit" value="Submit" class="btn btn-primary">
-			</form>
+		<label for="name">*Name</label>
+		<br/>
+		<input class="form-control" type="text" name="name" maxlength="50" required data-required></input>
+		<span id="errorname" name="errorname" style="display: none; color: #cc2626;"> Required field!</span>
+		<br/>
+		<label for="email">*Email</label><br/>
+		<input class="form-control" type="email" name="email" maxlength="250" required data-required></input><span id="erroremail" name="erroremail" style="display: none; color: #cc2626;"> Required field!</span>
+		<br/>
+		<label for="gender">*Gender</label>
+		<br/>
+		<select name="gender" required>
+			<option value="">-</option>
+			<option value="1">Female</option>
+			<option value="2">Male</option></select>
+		<span id="errorgender" name="errorgender" style="display: none; color: #cc2626;"> Required field!</span>
+		<br/>
+		<label for="phone">Phone</label>
+		<br/>
+		<input class="form-control" type="number" name="phone" maxlength="20" onchange="onChangePhoneValidation(this)" 
+		 onkeypress='return event.charCode >= 48 && event.charCode <= 57'
+		 placeholder="E.g.:1234567890" ></input>
+		 <span id="warningphone" name="warningphone" style="display: none; color: #EED202;"> Enter a 10 digit number to ensure you receive SMSs.</span>
+		 <br/>
+		 <label for="city">City</label>
+		 <br/>
+		 <input class="form-control" type="text" name="city" maxlength="50"></input>
+		 <br/>
+		 <label for="state">State</label>
+		 <br />
+		 <select class="form-control" name="state">
+		 	<option value="">-</option><option value="24">Alaska</option><option value="22">Alabama</option><option value="20">Arkansas</option><option value="11">Arizona</option><option value="21">California</option><option value="32">Colorado</option><option value="12">Connecticut</option><option value="44">District of Columbia</option><option value="9">Delaware</option><option value="39">Florida</option><option value="34">Georgia</option><option value="19">Hawaii</option><option value="49">Iowa</option><option value="40">Idaho</option><option value="23">Illinois</option><option value="5">Indiana</option><option value="25">Kansas</option><option value="30">Kentucky</option><option value="48">Louisiana</option><option value="6">Massachusetts</option><option value="1">Maryland</option><option value="50">Maine</option><option value="33">Michigan</option><option value="27">Minnesota</option><option value="2">Missouri</option><option value="36">Mississippi</option><option value="18">Montana</option><option value="8">North Carolina</option><option value="29">North Dakota</option><option value="35">Nebraska</option><option value="31">New Hampshire</option><option value="38">New Jersey</option><option value="43">New Mexico</option><option value="10">Nevada</option><option value="3">New York</option><option value="47">Ohio</option><option value="42">Oklahoma</option><option value="28">Oregon</option><option value="51">Pennsylvania</option><option value="13">Rhode Island</option><option value="45">South Carolina</option><option value="17">South Dakota</option><option value="37">Tennessee</option><option value="15">Texas</option><option value="41">Utah</option><option value="16">Virginia</option><option value="4">Vermont</option><option value="7">Washington</option><option value="26">Wisconsin</option><option value="46">West Virginia</option><option value="14">Wyoming</option></select><br/>
+		 	<label for="dateofbirth">Date Of Birth</label>
+		 	<br/>
+		 	<input class="form-control" type="date" name="dateofbirth"></input>
+		 	<br/>
+		 	<label for="subscribe">*Subscribe to SMS?<input class="form-control" type="checkbox" name="subscribe" value="True">(Msg&data rates may apply. | <a href='http://www.wodify.com/privacy-policy.html' target='_blank'>Privacy Policy</a> | <a href='http://www.wodify.com/terms.html' target='_blank'>T&Cs</a></label>)
+		 	<br/>
+		 	<label for="leadsource">How Did You Hear About Us?</label>
+		 	<br />
+		 	<select class="form-control" name="leadsource">
+		 		<option value="">-</option><option value="Friend/Family">Friend/Family</option><option value="Facebook">Facebook</option><option value="Google/Search Engine">Google/Search Engine</option><option value="SMS">SMS</option><option value="Online Sales">Online Sales</option><option value="Other">Other</option></select><br/>
+		 		<label for="referredby">Referred By</label>
+		 		<br/>
+	 		<input class="form-control" type="text" name="referredby" maxlength="1000"></input>
+	 		<br/>
+	 		<label for="comments">Comments</label>
+	 		<br/>
+	 		<textarea class="form-control" name="comments" maxlength="2000" rows="4" cols="50"></textarea>
+	 		<input class="form-control" type="hidden" name="redirecturl" value="https://www.primeperformancesc.com/waiver">
+			<input class="form-control" type="hidden" name="apikey" value="uahbal0k5c">
+			<br/><input class="btn btn-primary" type="submit" value="Submit">
+</form> 
+</div>
 		</div>
 	</div>
 </div>

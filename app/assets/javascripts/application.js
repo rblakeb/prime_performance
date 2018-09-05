@@ -18,23 +18,30 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
-
 function validateWodifyLeadForm()
 {
-	var reEmail = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-	var returnValue = true;var fieldname=document.forms['wodifyLeadForm']['name'].value;
-        if(fieldname==null||fieldname=='')
-            {document.getElementById('errorname').style.display='inline';returnValue=false;}
-        else
-            {document.getElementById('errorname').style.display='none';}var fieldemail=document.forms['wodifyLeadForm']['email'].value;
-	    if(fieldemail==null||fieldemail==''||!reEmail.test(fieldemail))
-	        {document.getElementById('erroremail').style.display='inline';returnValue=false;}
-	    else
-	        {document.getElementById('erroremail').style.display='none';}var fieldlocation=document.forms['wodifyLeadForm']['location'].options[document.forms['wodifyLeadForm']['location'].selectedIndex].value;if(fieldlocation==null||fieldlocation=='')
-	{document.getElementById('errorlocation').style.display='inline';returnValue=false;}
-		else
-	{document.getElementById('errorlocation').style.display='none';} return returnValue;
-}; 
+var reEmail = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+var returnValue = true;var fieldname=document.forms['wodifyLeadForm']['name'].value;
+            if(fieldname==null||fieldname=='')
+                {document.getElementById('errorname').style.display='inline';returnValue=false;}
+            else
+                {document.getElementById('errorname').style.display='none';}var fieldemail=document.forms['wodifyLeadForm']['email'].value;
+    if(fieldemail==null||fieldemail==''||!reEmail.test(fieldemail))
+        {document.getElementById('erroremail').style.display='inline';returnValue=false;}
+    else
+        {document.getElementById('erroremail').style.display='none';}var fieldgender=document.forms['wodifyLeadForm']['gender'].options[document.forms['wodifyLeadForm']['gender'].selectedIndex].value;if(fieldgender==null||fieldgender=='')
+{document.getElementById('errorgender').style.display='inline';returnValue=false;}
+else
+{document.getElementById('errorgender').style.display='none';} return returnValue;
+}; function onChangePhoneValidation(phoneId){
+    var fieldphone=phoneId.value.replace(/[^0-9]/g, "");
+    var fieldPhoneLenght=fieldphone.length;
+    if(fieldPhoneLenght==10||(0==0&&fieldPhoneLenght==0))
+        {document.getElementById('warningphone').style.display='none';}
+    else
+        {document.getElementById('warningphone').style.display='inline';}
+}  
+
 
 $(document).ready(function() {
 
