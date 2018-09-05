@@ -43,6 +43,7 @@ gem "font-awesome-rails"
 gem 'square_connect', '~> 2.20180712', '>= 2.20180712.1.234'
 gem 'devise'
 gem 'local_time'
+gem 'sitemap_generator'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

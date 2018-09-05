@@ -183,6 +183,8 @@ GEM
     selenium-webdriver (3.14.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
+    sitemap_generator (6.0.1)
+      builder (~> 3.0)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -244,6 +246,7 @@ DEPENDENCIES
   rails (~> 5.2)
   sass-rails (~> 5.0)
   selenium-webdriver
+  sitemap_generator
   spring
   spring-watcher-listen (~> 2.0.0)
   square_connect (~> 2.20180712, >= 2.20180712.1.234)
