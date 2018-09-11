@@ -4,12 +4,16 @@ class Blog < ApplicationRecord
 
   default_scope { order('created_at DESC') }
 
+  validates_presence_of :author, presence: true
+  validates_presence_of :content, presence: true
+  validates_presence_of :name, presence: true
+
 	def slug
     self.name.downcase.gsub(" ", "-")
   end
 
   def to_param
-    "#{slug}"
+    "#{id}-#{slug}"
   end
 
 	def self.tagged_with(name)

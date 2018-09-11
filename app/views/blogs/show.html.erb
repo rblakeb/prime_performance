@@ -5,6 +5,7 @@
 	<h1 class="blog-show-title">
 		<%= @blog.name %>
 	</h1>
+	<lead>By <%= @blog.author %></lead>
 	<p>
 		<small>Tags: <%= raw @blog.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(' | ') %></small>
 		<%= link_to 'All Posts <i class="fa fa-list-ul"></i>'.html_safe, blogs_path, class: 'btn btn-light pull-right' %>

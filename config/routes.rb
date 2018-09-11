@@ -1,9 +1,17 @@
 Rails.application.routes.draw do
 
-  resources :blogs, param: :slug
+  # get 'blog/', to: 'blogs#index', as: :blogs
+  # get 'blog/:id', to: 'blogs#show', as: :blog
+  # post 'blog/', to: 'blogs#create'
+  # get 'blog/new', to: 'blogs#new', as: :new_blog
+  # get 'blog/:id/edit', to: 'blogs#edit', as: :edit_blog
+  # delete 'blog/:id', to: 'blogs#delete'
+  # patch 'blog/:id', to: 'blogs#update'
+
+  resources :blogs
 
   get 'tags/:tag', to: 'blogs#index', as: :tag
-
+  
   devise_for :admins, controllers: {
   	sessions: 'admins/sessions',
   	registrations: 'admins/registrations',
