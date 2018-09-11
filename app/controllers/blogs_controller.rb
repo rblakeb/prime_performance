@@ -59,13 +59,6 @@ before_action :authenticate_admin!, only: [:new, :edit, :delete]
 
   private
 
-  def authenticate_admin!
-    unless current_admin
-      redirect_back(fallback_location: root_path)
-      flash[:notice] = "Sorry, you can't do that"
-    end
-  end
-
   def set_blog
   	@blog = Blog.find_by(params[:name])
   end
