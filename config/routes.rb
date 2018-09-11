@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :blogs
+  resources :blogs, param: :slug
 
   get 'tags/:tag', to: 'blogs#index', as: :tag
 

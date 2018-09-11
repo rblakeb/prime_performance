@@ -1,3 +1,17 @@
+# require 'fog/aws'
+
+# SitemapGenerator::Sitemap.adapter = SitemapGenerator::S3Adapter.new(fog_provider: 'AWS',
+#   aws_access_key_id: Rails.application.credentials.aws[:access_key_id],
+#   aws_secret_access_key: Rails.application.credentials.aws[:secret_access_key],
+#   fog_directory: 'primeperf',
+#   fog_region: 'us-east-1'
+# )
+
+# SitemapGenerator::Sitemap.public_path = 'tmp/'
+# SitemapGenerator::Sitemap.sitemaps_host = "https://s3.console.aws.amazon.com/s3/buckets/owlc/sitemaps/?region=us-west-2&tab=overview"
+# SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
+
+
 # Set the host name for URL creation
 SitemapGenerator::Sitemap.default_host = "https://www.primeperformancesc.com"
 

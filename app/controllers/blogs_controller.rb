@@ -48,7 +48,7 @@ before_action :authenticate_admin!, only: [:new, :edit, :delete]
   end
 
   def destroy
-    @blog = Blog.find(params[:id]).destroy
+    @blog = Blog.find_by(params[:name]).destroy
 
     respond_to do |format|
       format.html { redirect_to blogs_path, notice: 'Blog successfully deleted' }
@@ -67,7 +67,7 @@ before_action :authenticate_admin!, only: [:new, :edit, :delete]
   end
 
   def set_blog
-  	@blog = Blog.find(params[:id])
+  	@blog = Blog.find_by(params[:name])
   end
 
   def blog_params
