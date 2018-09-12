@@ -14,7 +14,7 @@
 				<p>Filter by tag: </p>
 			  <% Tag.all.each do |tag| %>
 			  	
-			   		<%= link_to tag.name, tag_path(tag.name), class: 'tag-cloud-button btn btn-light' %>
+			   		<%= link_to tag.name, tag_path(tag.name), class: 'tag-cloud-button btn btn-light' if tag.blogs.present? %>
 			  	
 			  <% end %>
 			</div>

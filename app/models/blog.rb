@@ -1,6 +1,6 @@
 class Blog < ApplicationRecord
 	has_many :taggings, dependent: :destroy
-	has_many :tags, through: :taggings
+	has_many :tags, through: :taggings, dependent: :destroy
 
   default_scope { order('created_at DESC') }
 
