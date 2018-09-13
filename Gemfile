@@ -46,6 +46,7 @@ gem 'local_time'
 gem 'sitemap_generator'
 # gem 'fog-aws'
 gem 'redcarpet'
+gem 'flatpickr'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

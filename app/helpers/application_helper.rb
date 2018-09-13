@@ -1,5 +1,5 @@
 module ApplicationHelper
-def title(text)
+  def title(text)
     content_for :title, text
   end
 
@@ -18,5 +18,15 @@ def title(text)
       # yield(tag, classes[index.round])
       tag.name
     end
+  end
+
+  def markdown(content)
+      renderer = Redcarpet::Render::HTML.new(hard_wrap: true, filter_html: true)
+      options = {
+        autolink: true,
+        strikethrough: true,
+        underline: true
+      }   
+      Redcarpet::Markdown.new(renderer, options).render(content).html_safe
   end
 end

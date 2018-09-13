@@ -1,0 +1,8 @@
+
+<h1>Workout of the Day <small><%= @workout.scheduled_on %></small></h1>
+<hr>
+<div class="container">
+	<p><%= markdown @workout.content %></p>
+	<%= link_to 'Edit Workout', edit_workout_path, class: 'btn btn-light' %>
+</div>
+<hr>

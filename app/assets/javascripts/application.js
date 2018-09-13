@@ -14,6 +14,7 @@
 //= require activestorage
 //= require jquery3
 //= require popper
+//= require flatpickr
 //= require local-time
 //= require bootstrap-sprockets
 //= require_tree .

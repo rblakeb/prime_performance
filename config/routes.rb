@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :workouts
+  
   # get 'blog/', to: 'blogs#index', as: :blogs
   # get 'blog/:id', to: 'blogs#show', as: :blog
   # post 'blog/', to: 'blogs#create'
