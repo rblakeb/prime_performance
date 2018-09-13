@@ -2,6 +2,10 @@ class WorkoutsController < ApplicationController
 
   before_action :set_workout, only: [:show, :edit, :update, :delete]
 
+  def index
+    @workouts = Workout.all
+  end
+
   def show
   end
 
@@ -12,10 +16,14 @@ class WorkoutsController < ApplicationController
   def create
     @workout = Workout.new(workout_params)
 
-    if @workout.save
-      redirect_to @workout, notice: 'Workout was successfully published'
-    else
-      render :new
+    respond_to do |format|
+      if @workout.save
+        format.html { redirect_to @workout, notice: 'Workout was successfully created.' }
+        format.json { render :show, status: :created, location: @workout }
+      else
+        format.html { render :new }
+        format.json { render json: @workout.errors, status: :unprocessable_entity }
+      end
     end
   end
 
@@ -38,7 +46,7 @@ class WorkoutsController < ApplicationController
   end
 
   def destroy
-    @workout = Workout.find(params[:id]).destroy
+    @workout = Workout.friendly.find(params[:id]).destroy
 
     respond_to do |format|
       format.html { redirect_to workouts_path, notice: 'Workout successfully deleted' }
@@ -50,10 +58,10 @@ class WorkoutsController < ApplicationController
 private
 
   def set_workout
-    @workout = Workout.find(params[:id])
+    @workout = Workout.friendly.find(params[:id])
   end
 
   def workout_params
-    params.require(:workout).permit(:sheduled_on, :publish_date, :content)
+    params.require(:workout).permit(:scheduled_on, :publish_date, :content)
   end
 end

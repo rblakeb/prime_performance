@@ -1,0 +1,7 @@
+<h1>Workouts</h1>
+<hr>
+<div class="container">
+<%= link_to 'New Workout', new_workout_path, class: 'btn btn-primary' %>
+<% @workouts.each do |w| %>
+	<%= link_to "Today's Workout", w, class: 'btn btn-link' %>
+<% end %></div>
