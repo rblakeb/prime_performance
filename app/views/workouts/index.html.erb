@@ -1,8 +1,15 @@
-<h1>Workouts <%= link_to 'New Workout', new_workout_path, class: 'btn btn-primary' %></h1>
+<% title 'Workouts Archive' %>
+<% meta_tag :description, 'A total list of prime performance workouts' %>
+
+<h1>Workouts <%= link_to 'New Workout', new_workout_path, class: 'btn btn-primary' if current_admin %></h1>
 <hr>
 <div class="container">
 <% @workouts.each do |w| %>
 	<ul>
-		<li class="list-workout-item"><%= link_to "Workout from #{local_date(w.scheduled_on)}".html_safe, w, class: 'btn btn-light' %></li>
+		<li class="list-workout-item">
+			<%= link_to "Workout from #{w.scheduled_on.strftime('%B %e, %Y')}", w, class: 'btn btn-light' %>
+				
+			</li>
 	</ul>
-<% end %></div>
+<% end %>
+</div>

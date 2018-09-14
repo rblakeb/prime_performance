@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :workouts
+  resources :workouts do
+    get :todays, on: :collection
+  end
   
   # get 'blog/', to: 'blogs#index', as: :blogs
   # get 'blog/:id', to: 'blogs#show', as: :blog

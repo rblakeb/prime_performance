@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
 
+  etag { current_admin.try :id }
+
   def current_page?
     current_page?(path)
   end

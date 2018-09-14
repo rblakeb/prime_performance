@@ -9,10 +9,11 @@ before_action :authenticate_admin!, only: [:new, :edit, :delete]
   	else
   		@blogs = Blog.all
   	end
+    fresh_when etag: @blogs
   end
 
   def show
-    fresh_when last_modified: @blog.updated_at
+    fresh_when etag: @blog
   end
 
   def new

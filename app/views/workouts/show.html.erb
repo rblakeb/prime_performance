@@ -4,7 +4,7 @@
 <h1>Workout of the Day</h1>
 <hr>
 <div class="container">
-	<h5><small class="primary-blue"><%= @workout.scheduled_on.strftime("%B %e, %Y") %></small></h5>
+	<h2 class="primary-blue"><%= @workout.scheduled_on.strftime("%B %e, %Y") %></h2>
 		<h6>
 					<p><%= markdown @workout.content %></p>
 		</h6>
