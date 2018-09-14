@@ -21,7 +21,7 @@
       <%= link_to 'Blog', blogs_path %>
     </li>
     <li class="<%= 'active' if current_page?(workouts_path) %>">
-      <%= link_to "Today's Workout", workouts_path %>
+      <%= link_to "Today's Workout", workout_path(id: Date.today) %>
     </li>
     <li>
       <%= link_to 'Sign Out', destroy_admin_session_path, method: :delete if current_admin %>

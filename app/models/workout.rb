@@ -8,4 +8,8 @@ class Workout < ApplicationRecord
 	# 	if self.publish_date == Date.current
 	# 		self.
 	# end
+
+	def current_workout
+		self.scheduled_on == Time.now
+	end
 end

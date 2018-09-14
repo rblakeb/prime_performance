@@ -1,7 +1,8 @@
-<h1>Workouts</h1>
+<h1>Workouts <%= link_to 'New Workout', new_workout_path, class: 'btn btn-primary' %></h1>
 <hr>
 <div class="container">
-<%= link_to 'New Workout', new_workout_path, class: 'btn btn-primary' %>
 <% @workouts.each do |w| %>
-	<%= link_to "Today's Workout", w, class: 'btn btn-link' %>
+	<ul>
+		<li class="list-workout-item"><%= link_to "Workout from #{local_date(w.scheduled_on)}".html_safe, w, class: 'btn btn-light' %></li>
+	</ul>
 <% end %></div>
