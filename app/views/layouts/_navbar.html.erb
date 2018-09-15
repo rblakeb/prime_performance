@@ -21,7 +21,7 @@
       <%= link_to 'Blog', blogs_path %>
     </li>
     <li class="<%= 'active' if current_page?(workouts_path) %>">
-      <%= link_to "Today's Workout", workout_path(id: Date.today) %>
+      <%= link_to "Today's Workout", todays_workouts_path %>
       <!-- MAYBE ADD... -->
       <!-- unless Date.today.sunday? -->
     </li>

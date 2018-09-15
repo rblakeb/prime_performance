@@ -44,4 +44,13 @@ SitemapGenerator::Sitemap.create do
     add blog_path(b), :lastmod => b.updated_at, :priority => 0.5
   end
 
+  add workouts_path, :priority => 0.1, :changefreq => 'daily'
+  Workout.find_each do |w|
+    add workout_path(w), :lastmod => w.updated_at, :priority => 0.5
+  end
+
+  add coaches_path :priority => 0.5
+  add contact_path :priority => 0.5
+  add packages_path :priority => 0.5
+
 end

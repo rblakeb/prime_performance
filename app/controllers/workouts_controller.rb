@@ -12,10 +12,10 @@ class WorkoutsController < ApplicationController
     fresh_when etag: @workout
   end
 
-  # def todays
-  #   @workout = Workout.where(scheduled_on: Date.today).first
-  #   redirect_to @workout
-  # end
+  def todays
+    @workout = Workout.where(scheduled_on: Date.today).first
+    redirect_to @workout
+  end
 
   def new
     @workout = Workout.new
