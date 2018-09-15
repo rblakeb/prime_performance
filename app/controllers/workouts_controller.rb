@@ -13,7 +13,7 @@ class WorkoutsController < ApplicationController
   end
 
   def todays
-    @workout = Workout.where(scheduled_on: Date.today).first
+    @workout = Workout.where(scheduled_on: Date.current).first
     redirect_to @workout
   end
 
