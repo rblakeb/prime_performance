@@ -20,8 +20,10 @@
     <li class="<%= 'active' if current_page?(blogs_path) %>">
       <%= link_to 'Blog', blogs_path %>
     </li>
-    <li class="<%= 'active' if current_page?(workouts_path) %>">
-      <%= link_to "Today's Workout", todays_workouts_path %>
+    <% unless Date.current.sunday %>
+      <li class="<%= 'active' if current_page?(workouts_path) %>">
+          <%= link_to "Today's Workout", todays_workouts_path %>
+    <% end %>
       <!-- MAYBE ADD... -->
       <!-- unless Date.today.sunday? -->
     </li>

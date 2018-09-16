@@ -4,7 +4,7 @@ class WorkoutsController < ApplicationController
   before_action :authenticate_admin!, only: [:new, :edit, :delete]
 
   def index
-    @workouts = Workout.all
+    @workouts = Workout.order('scheduled_on DESC')
     fresh_when etag: @workouts
   end
 
@@ -14,7 +14,11 @@ class WorkoutsController < ApplicationController
 
   def todays
     @workout = Workout.where(scheduled_on: Date.current).first
-    redirect_to @workout
+    if @workout.nil?
+      redirect_to workouts_path
+    else
+      redirect_to @workout
+    end
   end
 
   def new
