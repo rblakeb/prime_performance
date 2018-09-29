@@ -7,7 +7,7 @@
 <% @workouts.each do |w| %>
 	<ul>
 		<li class="list-workout-item">
-			<%= link_to "Workout from #{w.scheduled_on.strftime('%B %e, %Y')}", w, class: 'btn btn-light' %>
+			<%= link_to "Workout from #{w.scheduled_on.strftime('%a %B %e, %Y')}", w, class: 'btn btn-light' %>
 				
 			</li>
 	</ul>
