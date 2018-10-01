@@ -22,8 +22,9 @@
     </li>
       <li class="<%= 'active' if current_page?(workouts_path) %>">
           <%= link_to "Today's Workout", todays_workouts_path %>
-      <!-- MAYBE ADD... -->
-      <!-- unless Date.today.sunday? -->
+    </li>
+    <li class="owc-link">
+      <%= link_to 'Oklahoma Weightlifting Club', "https://www.oklahomaweightliftingclub.com" %>
     </li>
     <li>
       <%= link_to 'Sign Out', destroy_admin_session_path, method: :delete if current_admin %>

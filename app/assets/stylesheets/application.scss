@@ -275,6 +275,24 @@ i.fa.fa-instagram.fa-3x {
     }
   }
 
+  li.owc-link a {
+    border-bottom: $sliding-panel-border;
+    color: #990000;
+    display: block;
+    font-weight: bold;
+    padding: 2em;
+    text-decoration: none;
+
+    &:focus {
+      background-color: #990000;
+    }
+
+    &:hover {
+      background-color: #990000;
+      color: #ffffff;
+    }
+  }
+
   .active {
     font-weight: bold;
     color: #1E90FF;
