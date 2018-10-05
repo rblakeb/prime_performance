@@ -10,4 +10,7 @@ class PagesController < ApplicationController
 
   def packages
   end
+
+  def schedule
+  end
 end

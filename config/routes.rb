@@ -31,6 +31,6 @@ Rails.application.routes.draw do
   get '/coaches', to: 'pages#coaches', as: "coaches"
   get '/packages', to: 'pages#packages', as: "packages"
   get '/waiver', to: 'pages#waiver', as: "waiver"
-
+  get '/schedule', to: 'pages#schedule', as: "schedule"
   # get 'nutrition_coaches/sign_in', to: 'nutrition_coaches#sign_in'
 end
