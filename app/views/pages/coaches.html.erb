@@ -17,8 +17,8 @@
 				    <p class="card-text">Former strength & conditioning coach at Stanford University and East Central University</p>
 				    <p class="card-text">National-level Olympic weightlifter</p>
 				    <p class="card-text">Former collegiate football player (ECU)</p>
-				    <p class="card-text">Owner: <%= link_to 'Oklahoma Weightlifting Club', 'https://www.oklahomaweightliftingclub.com' %></p>
-				    <%= mail_to 'blake@primeperformancesc.com', 'Contact Blake', class: 'btn btn-primary' %>
+				    <p class="card-text">Owner: <%= link_to 'Oklahoma Weightlifting Club', 'https://www.oklahomaweightliftingclub.com', title: 'Oklahoma Weightlifting Club' %></p>
+				    <%= mail_to 'blake@primeperformancesc.com', 'Contact Blake', class: 'btn btn-primary', title: 'Contact Blake' %>
 				  </div>
 				</div>
 				<div class="card col-md-5">
@@ -31,11 +31,11 @@
 				    <p class="card-text">Former national-level Weightlifter</p>
 				    <p class="card-text">Former member of the Catalyst Athletics seminar staff</p>
 				    <p class="card-text">Former college softball player (San Jose State University)</p>
-				    <%= mail_to 'alyssa@primeperformancesc.com', 'Contact Alyssa', class: 'btn btn-primary' %>
+				    <%= mail_to 'alyssa@primeperformancesc.com', 'Contact Alyssa', class: 'btn btn-primary', title: 'Contact Alyssa' %>
 				  </div>
 				</div>
 				<div class="col-md-10">
-					<%= link_to "See packages <i class='fa fa-arrow-right fa-1x'></i>".html_safe, packages_path, class: 'btn btn-light see-packages-button' %>
+					<%= link_to "See packages <i class='fa fa-arrow-right fa-1x'></i>".html_safe, packages_path, class: 'btn btn-light see-packages-button', title: 'See training packages' %>
 				</div>	
 			</div>
 		</div>

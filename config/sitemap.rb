@@ -9,7 +9,7 @@
 
 # SitemapGenerator::Sitemap.public_path = 'tmp/'
 # SitemapGenerator::Sitemap.sitemaps_host = "https://s3.console.aws.amazon.com/s3/buckets/owlc/sitemaps/?region=us-west-2&tab=overview"
-# SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
+SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
 
 
 # Set the host name for URL creation
@@ -44,9 +44,9 @@ SitemapGenerator::Sitemap.create do
     add blog_path(b), :lastmod => b.updated_at, :priority => 0.5
   end
 
-  add workouts_path, :priority => 0.1, :changefreq => 'daily'
+  add workouts_path, :priority => 0.5, :changefreq => 'daily'
   Workout.find_each do |w|
-    add workout_path(w), :lastmod => w.updated_at, :priority => 0.5
+    add workout_path(w), :lastmod => w.updated_at, :priority => 0.5, :changefreq => 'daily'
   end
 
   add coaches_path :priority => 0.5
