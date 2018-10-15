@@ -13,4 +13,7 @@ class PagesController < ApplicationController
 
   def schedule
   end
+
+  def waiver
+  end
 end
