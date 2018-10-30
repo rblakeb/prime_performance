@@ -4,7 +4,7 @@
 	<h1><%= @article.title %></h1>
 	<hr>
 	<div class="row">
-		<p><%= @article.content %></p>
+		<p><%= markdown @article.content %></p>
 	</div>
 	<hr>
 		<% if current_admin %>

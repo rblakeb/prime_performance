@@ -25,7 +25,8 @@ module ApplicationHelper
       options = {
         autolink: true,
         strikethrough: true,
-        underline: true
+        underline: true,
+        linebreak: true
       }   
       Redcarpet::Markdown.new(renderer, options).render(content).html_safe
   end
