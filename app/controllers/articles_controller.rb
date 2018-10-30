@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :delete]
+  before_action :authenticate_admin!, only: [:new, :edit, :delete]
 
   def show
   end
@@ -36,10 +37,10 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    @article = Article.find(params[:id]).destroy
+    @article = Article.friendly.find(params[:id]).destroy
 
     respond_to do |format|
-      format.html { redirect_to articles_path, notice: 'Article successfully deleted' }
+      format.html { redirect_to new_article_path, notice: 'Article successfully deleted' }
       format.json { head :ok } 
       format.js
     end
@@ -48,7 +49,7 @@ class ArticlesController < ApplicationController
   private
 
   def set_article
-    @article = Article.find(params[:id])
+    @article = Article.friendly.find(params[:id])
   end
 
   def article_params

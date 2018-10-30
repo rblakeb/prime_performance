@@ -9,7 +9,7 @@ before_action :authenticate_admin!, only: [:new, :edit, :delete]
   	else
   		@blogs = Blog.all
   	end
-    fresh_when etag: @blogs
+    
   end
 
   def show
@@ -49,7 +49,7 @@ before_action :authenticate_admin!, only: [:new, :edit, :delete]
   end
 
   def destroy
-    @blog = Blog.find(params[:id]).destroy
+    @blog = Blog.friendly.find(params[:id]).destroy
 
     respond_to do |format|
       format.html { redirect_to blogs_path, notice: 'Blog successfully deleted' }
@@ -61,7 +61,7 @@ before_action :authenticate_admin!, only: [:new, :edit, :delete]
   private
 
   def set_blog
-  	@blog = Blog.find(params[:id])
+  	@blog = Blog.friendly.find(params[:id])
   end
 
   def blog_params

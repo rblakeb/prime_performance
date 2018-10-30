@@ -1,4 +1,7 @@
 class Blog < ApplicationRecord
+  extend FriendlyId
+  friendly_id :name, use: :slugged
+
 	has_many :taggings, dependent: :destroy
 	has_many :tags, through: :taggings, dependent: :destroy
 
@@ -8,13 +11,13 @@ class Blog < ApplicationRecord
   validates_presence_of :content, presence: true
   validates_presence_of :name, presence: true
 
-	def slug
-    self.name.downcase.gsub(" ", "-")
-  end
+	# def slug
+ #    self.name.downcase.gsub(" ", "-")
+ #  end
 
-  def to_param
-    "#{id}-#{slug}"
-  end
+  # def to_param
+  #   "#{id}-#{slug}"
+  # end
 
 	def self.tagged_with(name)
     	Tag.find_by!(name: name).blogs
