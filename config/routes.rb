@@ -28,6 +28,7 @@ Rails.application.routes.draw do
 
   root 'pages#index'
 
+  get '/privacy-policy', to: 'pages#privacy_policy', as: "privacy_policy"
   get '/contact', to: 'pages#contact', as: "contact"
   get '/coaches', to: 'pages#coaches', as: "coaches"
   get '/packages', to: 'pages#packages', as: "packages"

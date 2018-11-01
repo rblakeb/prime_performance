@@ -16,4 +16,7 @@ class PagesController < ApplicationController
 
   def waiver
   end
+
+  def privacy_policy
+  end
 end
