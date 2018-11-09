@@ -55,7 +55,7 @@ SitemapGenerator::Sitemap.create(
     add packages_path :priority => 0.5
 
     Article.find_each do |article|
-      add article_path(article), :lastmod => article.updated_at
+      add article_path(article), :lastmod => article.updated_at, :priority => 0.5
     end
 
 end

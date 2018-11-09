@@ -6,6 +6,7 @@
 <hr>
 <div class="container">
 	<div class="row text-center">
+		<h2 class="centered">Strength & Conditioning Classes</h2>
 		<table class="table table-striped">
 			<thead>
 				<tr>
@@ -47,7 +48,42 @@
 			</tbody>
 		</table>
 		<hr>
-		<h2 class="pt-contact">
+		<h2 class="centered">
+			Olympic Weightlifting Classes
+			<small><%= link_to 'Oklahoma Weightlifting Club', 'https://www.oklahomaweightliftingclub.com' %></small>
+		</h2>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th><p>Monday</p></th>
+					<th><p>Tuesday</p></th>
+					<th><p>Wednesday</p></th>
+					<th><p>Thursday</p></th>
+					<th><p>Friday</p></th>
+					<th><p>Saturday</p></th>
+					<th><p>Sunday</p></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1:00PM</td>
+					<td>1:00PM</td>
+					<td rowspan="2">6:30PM</td>
+					<td>1:00PM</td>
+					<td rowspan="2">1:00PM</td>
+					<td rowspan="2">10:00AM</td>				
+					<td rowspan="2">Closed</td>
+				</tr>
+
+				<tr>
+					<td>6:30PM</td>
+					<td>6:30PM</td>
+					<td>6:30PM</td>
+				</tr>
+			</tbody>
+		</table>
+		<hr>
+		<h2 class="centered">
 			Doesn't work with your schedule?
 			<small><p><%= link_to 'Contact us', contact_path, title: 'Contact us' %> for personal training.</p></small>
 		</h2>
