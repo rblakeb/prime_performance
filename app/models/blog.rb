@@ -2,6 +2,8 @@ class Blog < ApplicationRecord
   extend FriendlyId
   friendly_id :name, use: :slugged
 
+  paginates_per 10
+
 	has_many :taggings, dependent: :destroy
 	has_many :tags, through: :taggings, dependent: :destroy
 

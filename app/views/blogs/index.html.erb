@@ -31,4 +31,7 @@
 		<p class="text-center">We're currently thinking up some awesome stuff for you.</p>
 
 		<% end %>
+		<div class="text-center">
+			<%= paginate @blogs, window: 2 %>
+		</div>
 </div>

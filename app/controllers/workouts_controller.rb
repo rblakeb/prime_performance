@@ -4,7 +4,7 @@ class WorkoutsController < ApplicationController
   before_action :authenticate_admin!, only: [:new, :edit, :delete]
 
   def index
-    @workouts = Workout.order('scheduled_on DESC')
+    @workouts = Workout.order('scheduled_on DESC').page params[:page]
     fresh_when etag: @workouts
   end
 

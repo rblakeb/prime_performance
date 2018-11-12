@@ -58,4 +58,8 @@ SitemapGenerator::Sitemap.create(
       add article_path(article), :lastmod => article.updated_at, :priority => 0.5
     end
 
+    Tag.find_each do |tag|
+      add tag_path(tag), :lastmod => tag.created_at, :priority => 0.5
+    end
+
 end

@@ -396,3 +396,21 @@ div.img-links {
   }
 }
 
+/* PAGINATION */
+
+ul.pagination {
+  display: inline-flex;
+
+  li.page-item.active a {
+     background-color: #404040;
+     color: #ffffff; 
+     border-color: #999999;
+    }
+
+  li.page-item a {
+    color: #404040;
+  }
+}
+
+
+

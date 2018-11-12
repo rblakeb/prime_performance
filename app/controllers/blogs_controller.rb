@@ -9,7 +9,7 @@ before_action :authenticate_admin!, only: [:new, :edit, :delete]
   	else
   		@blogs = Blog.all
   	end
-    
+    @blogs = Blog.order('created_at DESC').page params[:page]
   end
 
   def show
