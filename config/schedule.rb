@@ -20,5 +20,5 @@
 # Learn more: http://github.com/javan/whenever
 
 every 1.day, at: '11:59 pm' do
-	command "heroku run rake sitemap:refresh"
+	rake "sitemap:refresh"
 end

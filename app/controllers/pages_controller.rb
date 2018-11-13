@@ -19,4 +19,8 @@ class PagesController < ApplicationController
 
   def privacy_policy
   end
+
+  def sitemap
+    redirect_to 'https://primeperformancesc.s3.amazonaws.com/sitemaps/sitemap.xml.gz'
+  end
 end

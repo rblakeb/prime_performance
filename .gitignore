@@ -31,3 +31,6 @@
 
 # Ignore seeds.rb
 /db/seeds.rb
+
+# ignore sitemap
+/config/sitemap.rb
