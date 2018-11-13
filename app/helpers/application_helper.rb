@@ -26,7 +26,10 @@ module ApplicationHelper
         autolink: true,
         strikethrough: true,
         underline: true,
-        linebreak: true
+        linebreak: true,
+        quote: true,
+        raw_html: true,
+        image: true
       }   
       Redcarpet::Markdown.new(renderer, options).render(content).html_safe
   end
