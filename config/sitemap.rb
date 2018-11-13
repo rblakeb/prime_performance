@@ -1,14 +1,14 @@
 require 'fog/aws'
 
 SitemapGenerator::Sitemap.adapter = SitemapGenerator::S3Adapter.new(fog_provider: 'AWS',
-  aws_access_key_id: 'AKIAJFLZLYY4MV3QC7MA',
-  aws_secret_access_key: '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',
+  aws_access_key_id: Rails.application.credentials[:aws][:access_key_id],
+  aws_secret_access_key: Rails.application.credentials[:aws][:secret_access_key],
   fog_directory: 'primeperf',
   fog_region: 'us-east-2'
 )
 
 SitemapGenerator::Sitemap.public_path = 'tmp/'
-SitemapGenerator::Sitemap.sitemaps_host = "http://primeperf.s3.amazonaws.com/"
+SitemapGenerator::Sitemap.sitemaps_host = "https://s3.us-east-2.amazonaws.com/primeperf/sitemaps/sitemap.xml.gz"
 SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
 
 
@@ -16,7 +16,7 @@ SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
 SitemapGenerator::Sitemap.default_host = "https://www.primeperformancesc.com"
 
 SitemapGenerator::Sitemap.ping_search_engines('http://primeperformancesc.com/sitemaps')
-SitemapGenerator::Sitemap.create_index = true
+SitemapGenerator::Sitemap.create_index = :auto
 SitemapGenerator::Sitemap.create do
 
   # Put links creation logic here.
@@ -38,8 +38,8 @@ SitemapGenerator::Sitemap.create do
   #
   # Add all articles:
   #
-
-    # add_to_index '/sitemap.xml.gz'
+  # add_to_index '/sitemap.xml.gz'
+  #
 
     add blogs_path, :priority => 0.5, :changefreq => 'daily'
     Blog.find_each do |b|

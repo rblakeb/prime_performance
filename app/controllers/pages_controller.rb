@@ -21,6 +21,6 @@ class PagesController < ApplicationController
   end
 
   def sitemap
-    redirect_to 'https://primeperformancesc.s3.amazonaws.com/sitemaps/sitemap.xml.gz'
+    redirect_to 'https://s3.us-east-2.amazonaws.com/primeperf/sitemaps/sitemap.xml.gz'
   end
 end
