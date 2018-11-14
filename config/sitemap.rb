@@ -15,7 +15,7 @@ SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
 # Set the host name for URL creation
 SitemapGenerator::Sitemap.default_host = "https://www.primeperformancesc.com"
 
-SitemapGenerator::Sitemap.ping_search_engines('http://primeperformancesc.com/sitemaps')
+SitemapGenerator::Sitemap.ping_search_engines('https://primeperformancesc.com/sitemaps')
 SitemapGenerator::Sitemap.create_index = :auto
 SitemapGenerator::Sitemap.create do
 

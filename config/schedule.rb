@@ -19,6 +19,6 @@
 
 # Learn more: http://github.com/javan/whenever
 
-every 1.day, at: '11:59 pm' do
-	rake "sitemap:refresh"
-end
+# every 1.day, at: '11:59 pm' do
+# 	rake "sitemap:refresh"
+# end
