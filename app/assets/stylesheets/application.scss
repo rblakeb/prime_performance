@@ -65,44 +65,6 @@ h1 {
   margin: 3%;
 }
 
-footer {
-  background-color: #404040;
-  margin-top: 15px;
-
-  div.col-md-12.py-5 {
-    text-align: center;
-    padding: 16px;
-
-    .waiver-button {
-      margin-bottom: 15px;
-    }
-  }
-
-  .btn.sign-up, .btn.sign-out {
-  color: rgba(255, 255, 255, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  right: 5px;
-  position: relative;
-  float: right;
-
-  &:hover {
-    color: #ffffff;
-    border-color: #ffffff;
-  }
-}
-
-
-  .btn.sign-in {
-    color: rgba(255, 255, 255, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-
-    &:hover {
-      color: #ffffff;
-      border-color: #ffffff;
-    }
-  }
-}
-
 p {
 	color: #777777;
 }
@@ -208,6 +170,46 @@ div.actions {
   margin: 10px;
 }
 /* FOOTER */
+
+footer {
+  background-color: #404040;
+  margin-top: 15px;
+
+  div.col-md-12.py-5 {
+    text-align: center;
+    padding: 16px;
+
+    .waiver-button {
+      margin-bottom: 15px;
+    }
+  }
+
+  .btn.sign-up, .btn.sign-out {
+  color: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  right: 5px;
+  position: relative;
+  float: right;
+
+  &:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+}
+
+
+  /*.btn.sign-in {
+    color: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    &:hover {
+      color: #ffffff;
+      border-color: #ffffff;
+    }
+  }*/
+}
+
+
 .btn.sign-up, .btn.sign-out {
   color: rgba(255, 255, 255, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.4);
@@ -256,6 +258,20 @@ i.fa.fa-instagram.fa-3x {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+}
+
+img.owc_logo {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+img.f5_logo {
+ width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block; 
 }
 
 /* SLIDING PANEL NAVBAR */
