@@ -17,6 +17,7 @@
 //= require flatpickr
 //= require local-time
 //= require bootstrap-sprockets
+//= require ckeditor/init
 //= require_tree .
 
 function validateWodifyLeadForm()
