@@ -21,13 +21,39 @@ module ApplicationHelper
   end
 
   def markdown(content)
-      renderer = Redcarpet::Render::HTML.new(hard_wrap: true, filter_html: true)
       options = {
-        autolink: true,
-        strikethrough: true,
-        underline: true,
-        linebreak: true
-      }   
+      filter_html:     false,
+      hard_wrap:       true, 
+      link_attributes: { rel: 'nofollow', target: "_blank" },
+      space_after_headers: true, 
+      fenced_code_blocks: true
+    }
+
+    extensions = {
+      quote:              true, 
+      highlight:          true,
+      strikethrough:      true,
+      underline:          true,
+      autolink:           true,
+      superscript:        true,
+      disable_indented_code_blocks: true,
+      image:              false
+    }
+
+      renderer = Redcarpet::Render::HTML.new(options)
+      markdown = Redcarpet::Markdown.new(renderer, extensions)
+
+      markdown.render(content).html_safe
+
+      # options = {
+      #   autolink: true,
+      #   strikethrough: true,
+      #   underline: true,
+      #   linebreak: true,
+      #   quote: true,
+      #   highlight: true,
+      #   blockquote: true
+      # }   
       Redcarpet::Markdown.new(renderer, options).render(content).html_safe
   end
 end
