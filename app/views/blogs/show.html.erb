@@ -12,6 +12,11 @@
 	</p>
 	<hr>
 	<div class="blog-show-content col-md-10">
-		<p class="text-center"><%= markdown @blog.content %></p>
+		<p class="text-center"><%= @blog.content.html_safe %></p>
 	</div>
+	<hr>
+	<% if current_admin %>
+		<%= link_to 'Edit Blog', edit_blog_path(@blog), class: 'btn btn-light' %>
+		<%= link_to 'Edit Blog', blog_path(@blog), method: :delete, data: { confirm: 'Are you sure you want to delete this blog?' }, class: 'btn btn-danger' %>
+	<% end %>
 </div>
