@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
-  mount Ckeditor::Engine => '/ckeditor'
   resources :articles
   resources :workouts do
     get :todays, on: :collection
   end
+
+  mount Ckeditor::Engine => '/ckeditor'
   
   # get 'blog/', to: 'blogs#index', as: :blogs
   # get 'blog/:id', to: 'blogs#show', as: :blog
