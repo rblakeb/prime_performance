@@ -19,9 +19,9 @@ module PrimePerformance
     config.time_zone = "Central Time (US & Canada)"
 
     # For Heroku to work with Ckeditor
-    config.assets.precompile += Ckeditor.assets
-    config.assets.precompile += %w( ckeditor/* )
-    config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
+    # config.assets.precompile += Ckeditor.assets
+    # config.assets.precompile += %w( ckeditor/* )
+    # config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
 
   end
 end
