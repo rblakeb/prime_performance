@@ -1,3 +1,5 @@
+<%= javascript_include_tag Ckeditor.cdn_url %>
+
 <%= form_for @workout do |f| %>
   <% if @workout.errors.any? %>
     <div id="error_explanation">
@@ -20,7 +22,7 @@
   </div>
   <div class="form-group">
     <%= f.label :content %><br />
-    <%= f.text_area :content, rows: 10, class: 'form-control' %>
+    <%= f.cktext_area :content, rows: 10, class: 'form-control' %>
   </div>
   
   <div class="actions">
