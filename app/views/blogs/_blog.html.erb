@@ -4,7 +4,11 @@
 		<p>
 		  Tags: <%= raw blog.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(' | ') %>
 		</p>
-	
-	<p><%= link_to "Edit Blog", edit_blog_path(blog), class: 'btn btn-light' if current_admin %></p>
-	<p><%= link_to "Delete", blog_path(blog), method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this blog post?' } if current_admin %></p>
+
+	<% if current_admin %>	
+		<div class="blog-admin-buttons">
+			<p><%= link_to "Edit Blog", edit_blog_path(blog), class: 'btn btn-light' %></p>
+			<p><%= link_to "Delete", blog_path(blog), method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this blog post?' } %></p>
+		</div>
+	<% end %>
 <hr>

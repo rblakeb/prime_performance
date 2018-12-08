@@ -5,11 +5,10 @@ before_action :authenticate_admin!, only: [:new, :edit, :delete]
 
   def index
   	@blogs = if params[:tag]
-  		Blog.tagged_with(params[:tag])
+  		Blog.tagged_with(params[:tag]).page params[:page]
   	else
-  		@blogs = Blog.all
+  		@blogs = Blog.order('created_at DESC').page params[:page]
   	end
-    @blogs = Blog.order('created_at DESC').page params[:page]
   end
 
   def show
