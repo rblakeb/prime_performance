@@ -1,5 +1,5 @@
 <h2><%= link_to blog.name, blog, class: 'blog-list-title' %></h2>
-	<p><em><%= blog.content.truncate(500, separator: ' ').html_safe %></em></p>
+	<p><%= blog.content.truncate(500, separator: ' ').html_safe %></p>
 	
 		<p>
 		  Tags: <%= raw blog.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(' | ') %>
@@ -7,8 +7,8 @@
 
 	<% if current_admin %>	
 		<div class="blog-admin-buttons">
-			<p><%= link_to "Edit Blog", edit_blog_path(blog), class: 'btn btn-light' %></p>
-			<p><%= link_to "Delete", blog_path(blog), method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this blog post?' } %></p>
+			<%= link_to "Edit Blog", edit_blog_path(blog), class: 'btn btn-light' %>
+			<%= link_to "Delete", blog_path(blog), method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this blog post?' } %>
 		</div>
 	<% end %>
 <hr>
