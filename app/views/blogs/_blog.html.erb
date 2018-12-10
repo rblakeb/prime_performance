@@ -1,5 +1,5 @@
 <h2><%= link_to blog.name, blog, class: 'blog-list-title' %></h2>
-	<p><em><%= markdown blog.content.truncate(500, separator: ' ').html_safe %></em></p>
+	<p><em><%= blog.content.truncate(500, separator: ' ').html_safe %></em></p>
 	
 		<p>
 		  Tags: <%= raw blog.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(' | ') %>

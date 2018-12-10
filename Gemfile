@@ -44,13 +44,13 @@ gem 'square_connect', '~> 2.20180712', '>= 2.20180712.1.234'
 gem 'devise'
 gem 'local_time'
 gem 'sitemap_generator'
-gem 'fog-aws'
+# gem 'fog-aws'
 gem 'redcarpet'
 gem 'flatpickr'
 gem 'friendly_id', '~> 5.2', '>= 5.2.4'
 gem 'kaminari'
 gem 'ckeditor', github: 'galetahub/ckeditor'
-gem 'paperclip'
+gem "aws-sdk-s3", require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
