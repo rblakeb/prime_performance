@@ -1,7 +1,10 @@
 <% title 'Workouts Archive' %>
 <% meta_tag :description, 'A total list of prime performance workouts' %>
 
-<h1>Workouts <%= link_to 'New Workout', new_workout_path, class: 'btn btn-primary' if current_admin %></h1>
+<h1 class="text-center">
+	Workouts <%= link_to 'New Workout', new_workout_path, class: 'btn btn-primary' if current_admin %>
+		
+</h1>
 <hr>
 <div class="container">
 <% @workouts.each do |w| %>

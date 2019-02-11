@@ -1,7 +1,9 @@
 <% title 'Workout of the day' %>
 <% meta_tag :description, 'Workout of the day' %>
 
-<h1>Workout of the Day</h1>
+<h1 class="text-center">
+	Workout of the Day
+</h1>
 <hr>
 <div class="container">
 	<h2 class="primary-blue"><%= @workout.scheduled_on.strftime("%B %e, %Y") %></h2>
