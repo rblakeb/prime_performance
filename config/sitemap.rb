@@ -60,7 +60,7 @@ SitemapGenerator::Sitemap.create do
     end
 
     Tag.find_each do |tag|
-      add tag_path(tag), :lastmod => tag.created_at, :priority => 0.5
+      add tag_path(tag.name), :lastmod => tag.created_at, :priority => 0.5
     end
 
 end
