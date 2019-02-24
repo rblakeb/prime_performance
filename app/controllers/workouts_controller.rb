@@ -74,6 +74,6 @@ private
   end
 
   def workout_params
-    params.require(:workout).permit(:scheduled_on, :publish_date, :content)
+    params.require(:workout).permit(:scheduled_on, :content)
   end
 end
