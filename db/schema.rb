@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_10_032820) do
+ActiveRecord::Schema.define(version: 2019_02_24_174236) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -138,7 +138,6 @@ ActiveRecord::Schema.define(version: 2018_12_10_032820) do
 
   create_table "workouts", force: :cascade do |t|
     t.date "scheduled_on"
-    t.datetime "publish_date"
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
