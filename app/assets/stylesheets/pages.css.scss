@@ -1,63 +1,47 @@
-.home-section-1 {
-	height: auto;
-	min-width: 100vw;
-	/*background: url('website_cover.jpg') no-repeat;*/
-	/*background-size: cover;*/
 
-	table {
-		margin-bottom: 0;
-		background-color: transparent;
 
-		a.btn.btn-primary.btn-lg {
-			padding: 15px;
-		}
-		.social-icons {
-			display: inline-flex;
-			top: 10px;
-			right: 10px;
-			position: absolute;
+div.home-section-1 {
+    height: auto;
+    min-width: 100vw;
+    table {
+    margin-bottom: 0;
+    background-color: transparent;
 
-				.nav-item {
-					z-index: 99997;
-					position: relative;
-					display: inline-flex;
-					margin-right: 5px;
+    a.btn.btn-primary.btn-lg {
+      padding: 15px;
+    }
 
-					.fa-facebook-square {
-						color: #777777;
+    .social-icons {
+      display: inline-flex;
+      top: 10px;
+      right: 10px;
+      position: absolute;
 
-						&:hover {
-							color: #4267b2;
-						}
-					}
-					.fa-instagram {
-						color: #777777;
+      .nav-item {
+        z-index: 99997;
+        position: relative;
+        display: inline-flex;
+        margin-right: 5px;
 
-						&:hover {    
-						    background: -webkit-linear-gradient(#8F55D4, #F91906, #F9E706);
-		    				-webkit-background-clip: text;
-		    				-webkit-text-fill-color: transparent;
-						}
-					}
-				}
-		}
-	}
-}
+        .fa-facebook-square {
+          color: #777777;
 
-.nav.justify-content-center {
-	display: flex;
-  flex-wrap: wrap;
- 	padding-left: 0;
- 	margin-bottom: 0;
- 	list-style: none;
- 	position: relative;
- 	margin-top: -60px;
+          &:hover {
+            color: #4267b2;
+          }
+        }
+        .fa-instagram {
+          color: #777777;
 
- 	.btn.btn-primary {
- 		margin-right: 8px;
- 		bottom: 10px;
- 		/*position: absolute;*/
- 	}
+          &:hover {    
+              background: -webkit-linear-gradient(#8F55D4, #F91906, #F9E706);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+          }
+        }
+      }
+    }
+  }
 }
 
 div.home-section-2 {

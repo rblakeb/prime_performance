@@ -1,16 +1,16 @@
 
 <div class="home-section-1">
-		<table class="table table-borderless table-dark">
-			<tr>
-				<td class=social-icons>
-					<%= link_to fa_icon('instagram', class: 'fa-2x'), 'https://www.instagram.com/primeperformancesc/', class: 'nav-item', alt: 'instagram', title: 'Follow on Us Instagram', target: '_blank' %>
-					<%= link_to fa_icon('facebook-square', class: 'fa-2x'), 'https://www.facebook.com/primeperformancesc/', class: 'nav-item', alt: 'facebook', title: 'Like on Us Facebook', target: '_blank' %>
-				</td>
-				<td class="text-center">
-					<%= link_to 'Get a free week!', contact_path, class: 'free-week btn btn-primary btn-lg' %>
-				</td>
-			</tr>
-		</table>
+		<table class="table table-borderless">
+      <tr>
+      	<td class="text-center">
+          <%= link_to 'Get a free week!', contact_path, class: 'free-week btn btn-primary btn-lg' %>
+        </td>
+        <td class="social-icons">
+          <%= link_to fa_icon('instagram', class: 'fa-2x'), 'https://www.instagram.com/primeperformancesc/', class: 'nav-item', alt: 'instagram', title: 'Follow on Us Instagram', target: '_blank' %>
+          <%= link_to fa_icon('facebook-square', class: 'fa-2x'), 'https://www.facebook.com/primeperformancesc/', class: 'nav-item', alt: 'facebook', title: 'Like on Us Facebook', target: '_blank' %>
+        </td>
+      </tr>
+    </table>
 		<%= image_tag 'website_cover.jpg', class: 'img-fluid', alt: 'Prime Performance Strength & Conditioning' %>
 </div>
 
