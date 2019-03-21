@@ -67,6 +67,11 @@
     <%= render 'layouts/navbar' %>
     <%= yield %>
     <%= render 'layouts/messages' %>
+    <% if Rails.env.production? %>
+      <!-- Start of HubSpot Embed Code -->
+        <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/5631484.js"></script>
+      <!-- End of HubSpot Embed Code -->
+    <% end %>
   </body>
   <%= render 'layouts/footer' %>
 </html>
