@@ -3,14 +3,17 @@
 
 <div id="coaches-page" class="home-section-3">		
 	<h1 class="text-center">
-		Meet the owners
+		Coaches
 	</h1>
 	<hr>
 		<div class="container">
 			<div class="row justify-content-center">
-				<div class="card col-md-5">
-				  <%= image_tag 'blake_snatch1.jpg', class: 'card-img-top', alt: 'Blake Barnes', title: 'Blake Barnes' %>
-				  <div class="card-body">
+				<div class="col-md-12 coach-section">
+				  <div class="col-md-4">
+				  	<%= image_tag 'blake_snatch1.jpg', class: 'card-img-top', alt: 'Blake Barnes', title: 'Blake Barnes' %>
+				  		
+				  	</div>
+				  <div class="card-body col-md-6">
 				    <h5 class="card-title">Blake Barnes, B.S. (Kinesiology)</h5>
 				    <hr>
 				    <p class="card-text">Owner/Coach</p>
@@ -21,9 +24,13 @@
 				    <%= mail_to 'blake@primeperformancesc.com', 'Contact Blake', class: 'btn btn-primary', title: 'Contact Blake' %>
 				  </div>
 				</div>
-				<div class="card col-md-5">
-				  <%= image_tag 'alyssa.jpg', class: 'card-img-top', alt: 'Alyssa Barnes', title: 'Alyssa Barnes' %>
-				  <div class="card-body">
+				<hr>
+				<div class="col-md-12 coach-section">
+				  <div class="col-md-4">
+				  	<%= image_tag 'alyssa.jpg', class: 'card-img-top', alt: 'Alyssa Barnes', title: 'Alyssa Barnes' %>
+				  		
+				  	</div>				  
+				  <div class="card-body col-md-6">
 				    <h5 class="card-title">Alyssa Barnes (Sulay), B.S. (Kinesiology)</h5>
 				    <hr>
 				    <p class="card-text">Owner/Coach</p>
@@ -32,6 +39,22 @@
 				    <p class="card-text">Former member of the Catalyst Athletics seminar staff</p>
 				    <p class="card-text">Former college softball player (San Jose State University)</p>
 				    <%= mail_to 'alyssa@primeperformancesc.com', 'Contact Alyssa', class: 'btn btn-primary', title: 'Contact Alyssa' %>
+				  </div>
+				</div>
+				<hr>
+				<div class="col-md-12 coach-section">
+				  <div class="col-md-4">
+				  	<%= image_tag 'chad_arnold.jpeg', class: 'card-img-top', alt: 'Chad Arnold', title: 'Chad Arnold' %>
+				  		
+				  	</div>
+				  <div class="card-body col-md-6">
+				    <h5 class="card-title">Chad Arnold</h5>
+				    <hr>
+				    <p class="card-text">Coach</p>
+				    <p class="card-text">CrossFit Level 1 Trainer</p>
+				    <p class="card-text">CrossFit competitor since 2013</p>
+				    <p>Chad played football and baseball in high school and has a strong desire to coach and help people get the most out of their physical fitness. </p>
+				    <%= mail_to 'info@primeperformancesc.com', 'Contact Chad', class: 'btn btn-primary', title: 'Contact Chad' %>
 				  </div>
 				</div>
 				<div class="col-md-10">
