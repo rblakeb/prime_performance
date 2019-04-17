@@ -26,6 +26,11 @@
       <li class="<%= 'active' if current_page?(workouts_path) %>">
           <%= link_to "Today's Workout", todays_workouts_path %>
     </li>
+    <% if current_admin %>
+      <li class="<%= 'active' if current_page?(new_workout_path) %>">
+            <%= link_to "New Workout", new_workout_path %>
+      </li>
+    <% end %>
     <li class="owc-link">
       <%= link_to 'Oklahoma Weightlifting Club', "https://www.oklahomaweightliftingclub.com" %>
     </li>
