@@ -21,9 +21,11 @@
     </div>
     <!-- Grid column -->
     <div class="img-links">
-      <%= link_to image_tag('owc_logo.png', class: 'owc_logo'), 'https://www.oklahomaweightliftingclub.com', target: '_blank', title: 'Oklahoma Weightlifting Club', alt: 'Oklahoma Weightlifting Club' %>
-
-      <%= link_to image_tag('f5_cover_photo.jpg', class: 'f5_logo'), 'https://www.f5chiropractic.com', target: '_blank', title: 'F5 Chiropractic', alt: 'F5 Chiropractic' %>
+      <div class="col-md-6">
+            <%= link_to image_tag('owc_logo.png', class: 'owc_logo'), 'https://www.oklahomaweightliftingclub.com', target: '_blank', title: 'Oklahoma Weightlifting Club', alt: 'Oklahoma Weightlifting Club' %>
+      </div>
+      <div class="col-md-6"><%= link_to image_tag('f5_cover_photo.jpg', class: 'f5_logo'), 'https://www.f5chiropractic.com', target: '_blank', title: 'F5 Chiropractic', alt: 'F5 Chiropractic' %>
+            </div>
     </div>
       <!-- Copyright -->
       <div class="footer-copyright text-center py-3">
