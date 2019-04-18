@@ -17,11 +17,12 @@ div.home-section-1 {
       right: 10px;
       position: absolute;
 
-      .nav-item {
+      a.nav-item {
         z-index: 99997;
         position: relative;
         display: inline-flex;
         margin-right: 5px;
+        text-decoration: none;
 
         .fa-facebook-square {
           color: #777777;
@@ -88,13 +89,15 @@ div.contact-info.col-4.pull-right {
 		display: inline-flex;
 		top: 10px;
 		position: relative;
+		list-style: none;
 
-		.nav-item {
+		a.nav-item {
 			z-index: 99997;
 			position: relative;
 			display: inline-flex;
 			margin-top: 15px;
 			margin-right: 5px;
+			text-decoration: none;
 
 			.fa-facebook-square {
 				color: #777777;
@@ -169,6 +172,10 @@ div.card {
 }
 
 /*SCHEDULE*/
+
+i.fa.fa-calendar-alt {
+	color: #999999;
+}
 
 table.table-striped {
 	th {
