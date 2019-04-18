@@ -39,7 +39,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
-gem "font-awesome-rails"
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 gem 'square_connect', '~> 2.20180712', '>= 2.20180712.1.234'
 gem 'devise'
 gem 'local_time'
