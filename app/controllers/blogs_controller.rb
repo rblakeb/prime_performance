@@ -5,7 +5,7 @@ before_action :authenticate_admin!, only: [:new, :edit, :delete]
 
   def index
   	@blogs = if params[:tag]
-  		Blog.tagged_with(params[:tag]).page params[:page]
+  		Blog.friendly.tagged_with(params[:tag]).page params[:page]
   	else
   		@blogs = Blog.order('created_at DESC').page params[:page]
   	end
@@ -62,6 +62,8 @@ before_action :authenticate_admin!, only: [:new, :edit, :delete]
   def set_blog
   	@blog = Blog.friendly.find(params[:id])
   end
+
+  def 
 
   def blog_params
   	params.require(:blog).permit(:name, :published_on, :content, :tag_list, :author)
