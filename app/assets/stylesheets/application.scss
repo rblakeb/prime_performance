@@ -497,5 +497,18 @@ ul.pagination {
   }
 }
 
+/*FORM SUBMITTED PARTIAL*/
 
+.form-submitted {
+  .list-group {
+    margin: 25px 15px;
 
+    .list-group-item {
+
+      &:hover {
+        color: #ffffff;
+        background-color: #007bff;
+      };
+    }
+  }
+}

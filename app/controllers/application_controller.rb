@@ -30,5 +30,9 @@ class ApplicationController < ActionController::Base
       flash[:notice] = "Sorry, you can't do that"
     end
   end
+
+  def form_submitted
+    render 'layouts/_form_submitted'
+  end
   
 end

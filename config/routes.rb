@@ -30,6 +30,7 @@ Rails.application.routes.draw do
 
   root 'pages#index'
 
+  get '/form_submitted', to: 'application#form_submitted'
   get '/sitemaps', to: 'pages#sitemap'
   get '/privacy-policy', to: 'pages#privacy_policy', as: "privacy_policy"
   get '/get-started', to: 'pages#get_started', as: "get_started"

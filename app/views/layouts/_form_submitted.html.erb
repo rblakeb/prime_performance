@@ -1,0 +1,14 @@
+<div class="form-submitted text-center">
+	<h2>Form Successfully submitted!</h2>
+	<h3 class="text-muted">
+		<small>Keep exploring...</small>
+	</h3>
+		<div class="list-group">
+  		<%= link_to 'Training Packages', packages_path, class: 'list-group-item list-group-item-action' %>
+  		<%= link_to 'Schedule', schedule_path, class: 'list-group-item list-group-item-action' %>
+  		<%= link_to "Today's Workout", todays_workouts_path, class: 'list-group-item list-group-item-action' %>
+  		<%= link_to 'Olympic Weightlifting', "https://www.oklahomaweightliftingclub.com", class: 'list-group-item list-group-item-action', target: "_blank" %>
+		  <%= link_to 'Blog Posts', blogs_path, class: 'list-group-item list-group-item-action' %>
+		  <%= link_to 'Coaches', coaches_path, class: 'list-group-item list-group-item-action' %>
+		</div>
+</div>
