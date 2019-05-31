@@ -70,11 +70,11 @@
     <%= render 'layouts/navbar' unless current_page?(form_submitted_path) %>
     <%= yield %>
     <%= render 'layouts/messages' %>
-    <% if Rails.env.production? %>
+    <% unless Rails.env.development? && current_page?(form_submitted_path) %>
       <!-- Start of HubSpot Embed Code -->
         <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/5631484.js"></script>
       <!-- End of HubSpot Embed Code -->
     <% end %>
   </body>
-  <%= render 'layouts/footer' %>
+  <%= render 'layouts/footer' unless current_page?(form_submitted_path) %>
 </html>
