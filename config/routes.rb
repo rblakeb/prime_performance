@@ -32,7 +32,7 @@ Rails.application.routes.draw do
 
   get '/sitemaps', to: 'pages#sitemap'
   get '/privacy-policy', to: 'pages#privacy_policy', as: "privacy_policy"
-  get '/contact', to: 'pages#contact', as: "contact"
+  get '/get-started', to: 'pages#get_started', as: "get_started"
   get '/coaches', to: 'pages#coaches', as: "coaches"
   get '/packages', to: 'pages#packages', as: "packages"
   get '/waiver', to: 'pages#waiver', as: "waiver"
