@@ -41,7 +41,7 @@ gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 gem 'square_connect', '~> 2.20180712', '>= 2.20180712.1.234'
-gem 'devise'
+gem "devise", ">= 4.7.1"
 gem 'local_time'
 gem 'sitemap_generator'
 gem 'fog-aws'
