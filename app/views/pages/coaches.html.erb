@@ -72,6 +72,21 @@
 				    <%= mail_to 'serena@primeperformancesc.com', 'Contact Serena', class: 'btn btn-primary', title: 'Contact Serena' %>
 				  </div>
 				</div>
+				<hr>
+				<div class="col-md-12 coach-section">
+				  <div class="col-md-4">
+				  	<%= image_tag 'mary_smith.jpeg', class: 'card-img-top', alt: 'Mary Smith', title: 'Mary Smith' %>
+				  		
+				  	</div>
+				  <div class="card-body col-md-6">
+				    <h5 class="card-title">Mary Smith</h5>
+				    <hr>
+				    <p class="card-text">Nutrition Coach</p>
+				    <p class="card-text">Founder of <%= link_to 'Powerhouse Performance Nutrition Coaching', 'https://powerhousepnc.com/', title: 'Powerhouse PNC', target: '_blank', alt: 'Powerhouse PNC' %> (2014)</p>
+				    <p class="card-text">Former long distance runner, collegiate athlete and current weightlifter and fitness coach</p>
+				    <%= mail_to 'info@primeperformancesc.com', 'Contact Mary', class: 'btn btn-primary', title: 'Contact Mary' %>
+				  </div>
+				</div>
 				<div class="col-md-10">
 					<%= link_to "See packages <i class='fa fa-arrow-right fa-1x'></i>".html_safe, packages_path, class: 'btn btn-light see-packages-button', title: 'See training packages' %>
 				</div>	
